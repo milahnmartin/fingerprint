@@ -352,7 +352,7 @@ header {
 /* Banner Style */
 .banner {
 	background-image: url(../images/background-za.jpg);
-	background: linear-gradient(rgba(19, 19, 19, 0.5), rgba(107, 40, 231, 0.829)), url(../images/background-za.jpg);
+	background: linear-gradient(rgba(175, 2, 255, 0.5), rgba(9, 255, 152, 0.829)), url(../images/background-za.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 300px 0px;
