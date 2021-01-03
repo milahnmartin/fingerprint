@@ -1143,6 +1143,23 @@ footer .sub-footer a {
 		padding: 6px 10px;
 		letter-spacing: 0px;
 	}
+
+	.navbar-brand img{
+		position: relative;
+		top: -10px;
+	}
+	#reg-button{
+		position: relative;
+		top: 2px;
+		left: -23px;
+	}
+
+	
+#navbarResponsive{
+	position: absolute !important;
+	left: 00px !important;
+}
+
 }
 
 /* New Milahn updates */
