@@ -79,28 +79,11 @@
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <div class="header-text caption">
-              <h2>ZA FINGERPRINT</h2>
-              <div id="search-section">
-              	<form id="suggestion_form" name="gs" method="get" action="#">
-                <div class="searchText">
-                  <input type="text" name="q" id="user-q" class="searchText" placeholder="Enter your search query here..." autocomplete="on">
-                  
-                </div>
-                    <!-- <input type="submit" name="results" class="main-button" value="Search Nowww"> -->
-                    <button type="button" id="search-q" class="main-button search-btn btn btn-primary btn-lg" style="font-size:19px;">SEARCH</button>
-                    <div class="radio-group mx-auto" style="width: 280px;color: white;font-weight:lighter;">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="csgo">
-                        <label class="form-check-label" for="inlineRadio1">CS:GO</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="fortnite">
-                        <label class="form-check-label" for="inlineRadio2">FORTNITE</label>
-                      </div>
-                      </div>
-                 </form>
-               <div class="advSearch_chkbox">
-               </div>
+              <h2 style="font-size: 50px;">ZA FINGERPRINT</h2>
+              <!-- Example single danger button -->
+              <div class="game-buttons">
+              <button type="button" id="fn-click" style="width: 100px;margin-right: 15px;" class="btn btn-primary">FORTNITE</button>
+              <button type="button" id="cs-click" style="width: 100px;" class="btn btn-primary">CS:GO</button>
               </div>
             </div>
           </div>
@@ -468,34 +451,7 @@
       }
     </script>
 
-<!-- The core Firebase JS SDK is always  and must be listed first -->
 
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyDZpGc9E2BhD_XMJcYlir2c_bRVoL--hJw",
-    authDomain: "fingerprint-za.firebaseapp.com",
-    databaseURL: "https://fingerprint-za-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "fingerprint-za",
-    storageBucket: "fingerprint-za.appspot.com",
-    messagingSenderId: "1099288539318",
-    appId: "1:1099288539318:web:5944ddd1eb25e0b58c7617",
-    measurementId: "G-5L8EW2MW4R"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-<script src="./assets/js/search.js"></script>
+<script src="./assets/js/redirect.js"></script>
   </body>
 </html>
