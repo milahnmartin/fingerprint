@@ -16,14 +16,26 @@ srchBTN.addEventListener('click', (e) => {
   const input = document.getElementById('user-q').value;
   var search_type = $("input:radio[name ='inlineRadioOptions']:checked").val();
 
-  if(search_type == 'player'){
+  if(search_type == 'csgo'){
     rootRefCS.orderByKey().on('value', snapshot => {
     console.log(snapshot.val()[input]);
+    LoadInfo(input);
     });
-  }else if(search_type == 'team'){
-    
+  }else if(search_type == 'fortnite'){
+    rootRefFN.orderByKey().on('value', snapshot => {
+      console.log(snapshot.val()[input]);
+      LoadInfo(input);
+      });
+
   }else{
     alert('PLEASE SELECT A SEARCH OPTION... ')
   }
 });
 
+
+function LoadInfo(userName){
+  url = "location.href='player.html'";
+  window.location(url);
+  
+  
+};
