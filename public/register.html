@@ -8,7 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - Contact</title>
+    <title>ZA FINGERPRINT - REGISTER</title>
     <link rel="icon" 
       type="image/png" 
       href="./assets/images/fingerprint-b.png">
@@ -39,33 +39,10 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2><img src="./assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;"><em></em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2><img src="./assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;position: relative;left: 520px;"><em></em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive" style="position: relative; left: -190px;">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Our Services</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="functional-buttons">
-            <ul>
-              <li><a target="__blank" id="reg-button" href="https://fingerprint-za.web.app/register">Register</a></li>
-            </ul>
-          </div>
         </div>
       </nav>
     </header>
@@ -76,15 +53,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Contact Us</h1>
-            <p><a href="index.html">Home</a> / <span>Contact Us</span></p>
+            <h1>Register Yourself</h1>
+            <p><a target="__blank" href="">Home</a> / <span>Player Register</span></p>
           </div>
         </div>
       </div>
     </div>
     <!-- Heading Ends Here -->
-
-
+<div class="radio-group reg-group">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="fn">
+      <label class="form-check-label" for="inlineRadio1">Fortnite</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="cs">
+      <label class="form-check-label" for="inlineRadio2">CS:GO</label>
+    </div>
+    </div>
+    
     <!-- Contact Us Starts Here -->
     <div class="contact-us">
       <div class="container">
@@ -95,28 +81,97 @@
                 <div class="row">
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="name" type="text" id="name" placeholder="Your name" required="">
+                      <input name="name" type="text" id="name" placeholder="Your Gaming Name">
                     </fieldset>
                   </div>
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="email" type="text" id="email" placeholder="Your email" required="">
+                      <input name="subject" type="text" id="platform" placeholder="PC or Console" >
                     </fieldset>
                   </div>
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="subject" type="text" id="subject" placeholder="Subject">
+                      <input name="email" type="text" id="keyboard" placeholder="Your Keyboard (if on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="mouse" placeholder="Your mouse (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="headset" placeholder="Your Headset">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="monitor" placeholder="Your Monitor (Include refresh rate and response time)" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="sens" placeholder="Your InGame Sensitivity" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="cpu" placeholder="Your CPU (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="gpu" placeholder="Your GPU (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="ram" placeholder="Your Ram (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="mobo" placeholder="Your Motherboard (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="controller" placeholder="Your Controller [Ps4,Xbox etc] (Of on PC type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="ping" placeholder="Your Average Ping" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="res" placeholder="Your Resolution" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="debut" placeholder="Game Debut ('When did you first start playing ?')"">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="signed" placeholder="Signed ('If signed type Team Name, if not type 'none')" >
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <textarea name="message" rows="6" id="message" placeholder="Your message" required=""></textarea>
+                      <textarea name="message" rows="6" id="info" placeholder="Short Information about Yourself" ></textarea>
                     </fieldset>
                   </div>
-                  <div class="col-lg-12">
+                  <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                      <input name="subject" type="text" id="main-social" placeholder="Your Main Social Media Link">
                     </fieldset>
+                  </div>
+                  
+                  <div class="col-lg-12">
+                    <button type="button" class="btn btn-outline-primary" id="submit">REGISTER</button>
                   </div>
                 </div>
               </form>
@@ -127,19 +182,19 @@
               <div class="section-heading">
                 <span>Contact Us</span>
                 <h2>Let's keep in touch</h2>
-                <p>Quisque sagittis blandit sapien et elementum. Fusce pretium viverra consequat. Aliquam at feugiat mi. Pellentesque hendrerit, felis ac sodales commodo.</p>
+                <p>ZA Fingerprint is on the buildup, and we need data from you as player. If you need anything feel free to contact us on any social medias.</p>
               </div>
-              <div class="row">
+              <div class="row check">
                 <div class="col-md-6 col-sm-12">
-                  <ul>
-                    <li><i class="fa fa-phone"></i> 010-020-0560</li>
-                    <li><i class="fa fa-support"></i> support@company.com</li>
+                  <ul style="font-size: 15px;">
+                    <li><i class="fa fa-phone"></i></li>
+                    <li><i class="fa fa-support"></i>info.zafingerprint</li>
                   </ul>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <ul>
-                    <li><i class="fa fa-envelope"></i> contact@company.com</li>
-                    <li><i class="fa fa-globe"></i> www.company.com</li>
+                  <ul  >
+                    <li><i class="fa fa-envelope"></i>info.zafingerprint</li>
+                    <li><i class="fa fa-globe"></i>Not Availible</li>
                   </ul>
                 </div>
               </div>
@@ -262,17 +317,16 @@
                 <h2>More Information</h2>
               </div>
               <ul class="footer-list">
-                <li>Phone: <a href="#">072-446-9767</a></li>
                 <li>Email: <a href="#">info.zafingerprint@gamil.com</a></li>
                 <li>Support:<a href="#">info.zafingerprint@gmail.com</a></li>
-                <li>Website: <a href="#">www.fingerprintza.co.za</a></li>
+                <li>Website: <a href="#">Fingerprint</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-12">
             <div class="sub-footer">
               <p>Copyright &copy; 2021 ZA FINGERPRINT
-				- Designed by <a rel="nofollow" href="https://twitter.com/ultrafyy">Milahn Martin</a></p>
+				- Designed by <a rel="nIfollow" href="https://twitter.com/ultrafyy">Milahn Martin</a></p>
             </div>
           </div>
         </div>
@@ -285,26 +339,51 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Additional Scripts -->
+
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/accordions.js"></script>
+   
 
 
     <script language = "text/Javascript"> 
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
+      function clearField(t){                   //declaring the array outside If the
       if(! cleared[t.id]){                      // function makes it static and global
           cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
+          t.value='';         // with more chance If typos
           t.style.color='#fff';
           }
       }
     </script>
 
-    <!-- FIREBASE -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
 
+<!-- The core Firebase JS SDK is always  and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDZpGc9E2BhD_XMJcYlir2c_bRVoL--hJw",
+    authDomain: "fingerprint-za.firebaseapp.com",
+    databaseURL: "https://fingerprint-za-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "fingerprint-za",
+    storageBucket: "fingerprint-za.appspot.com",
+    messagingSenderId: "1099288539318",
+    appId: "1:1099288539318:web:5944ddd1eb25e0b58c7617",
+    measurementId: "G-5L8EW2MW4R"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="./assets/js/register.js"></script>
   </body>
 </html>

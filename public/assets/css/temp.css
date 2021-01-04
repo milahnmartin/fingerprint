@@ -204,9 +204,11 @@ header {
     transition: all .5s ease 0s;
 }
 .background-header {
-	background-color: #fff!important;
+	background-color: #000000 !important;
 	box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+
 }
+
 .background-header .navbar-brand h2 {
 	color: #1e1e1e!important;
 }
@@ -995,6 +997,16 @@ footer .sub-footer a {
 	margin-bottom: -147px;
 }
 
+
+@media (min-width: 1600px){
+	.search-btn{
+		position: absolute;
+		left: 575px;
+		top: -1px;
+		height: 50px;
+	}
+}
+
 /* Responsive Style */
 @media (max-width: 1200px) {
 	.banner #search-section input.main-button {
@@ -1031,6 +1043,29 @@ footer .sub-footer a {
 		margin-right: 15px;
 		margin-left: 15px;
 		margin-bottom: 15px;
+	}
+
+	#navbarResponsive{
+		position: relative;
+		left: -70px !important;
+	}
+	.navbar-brand img{
+		position: relative !important;
+		left: 40px !important;
+
+	}
+
+	.search-btn{
+		position: relative;
+		top: 100px;
+	}
+}
+
+
+@media (width:768px){
+	header{
+		overflow: hidden;
+		max-width: 768px !important;
 	}
 }
 @media (max-width: 991px) {
@@ -1105,6 +1140,15 @@ footer .sub-footer a {
 	.contact-us .right-content ul li i {
 		margin-left: 0px;
 	}
+	
+}
+@media (max-width: 414px) {
+	.navbar-brand img{
+		position: relative !important;
+		left: 649px !important;
+
+	}
+
 }
 
 @media (max-width: 767px) {
@@ -1160,6 +1204,13 @@ footer .sub-footer a {
 	left: 00px !important;
 }
 
+
+.navbar-brand img{
+	position: relative !important;
+	left: 10px !important;
+
+}
+
 }
 
 
@@ -1167,6 +1218,16 @@ footer .sub-footer a {
 	filter: invert(100%) sepia(2%) saturate(7470%) hue-rotate(168deg) brightness(107%) contrast(101%);
 
 }
+
+.reg-group{
+	display: flex;
+	margin-top: 20px;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
 
 /* New Milahn updates */
 
