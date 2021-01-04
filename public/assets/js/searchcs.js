@@ -1,8 +1,8 @@
 
 const srchBTN = document.getElementById('search-q');
 const database = firebase.database();
+const rootRef = database.ref('users/CS');
 
-const rootRef = database.ref('users/FN');
 
 
 

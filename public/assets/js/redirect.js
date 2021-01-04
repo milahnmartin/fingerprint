@@ -6,5 +6,9 @@ const fnBTN = document.getElementById('fn-click');
 fnBTN.addEventListener('click',() => {
   window.open('https://fingerprint-za.web.app/fortnite');
   });
+
+  csBTN.addEventListener('click',() => {
+    window.open('https://fingerprint-za.web.app/csgo');
+    });
   
     
