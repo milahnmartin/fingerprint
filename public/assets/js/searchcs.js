@@ -10,6 +10,10 @@ const rootRef = database.ref('users/CS');
 
 
 
+function changeToUpperCase(t) {
+  var eleVal = document.getElementById(t.id);
+  eleVal.value= eleVal.value.toUpperCase().replace(/ /g,'');
+}
 
 
 

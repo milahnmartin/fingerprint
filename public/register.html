@@ -39,10 +39,33 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2><img src="./assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;position: relative;left: 520px;"><em></em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2><img src="./assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;"><em></em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive" style="position: relative; left: -190px;">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Our Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="functional-buttons">
+            <ul>
+              <li><a target="__blank" id="reg-button" href="https://fingerprint-za.web.app/register">Register</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -81,7 +104,7 @@
                 <div class="row">
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="name" type="text" id="name" placeholder="Your Gaming Name">
+                      <input name="name" type="text" id="name" placeholder="Your Gaming Name" onkeyup="changeToUpperCase(this)">
                     </fieldset>
                   </div>
                   <div class="col-md-12 col-sm-12">
