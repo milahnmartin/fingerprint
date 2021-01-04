@@ -36,6 +36,9 @@ if(user_name.value == ""){
   alert('Required Fields are empty ...')
   setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 }else{ 
+  $('html, body').animate({
+    scrollTop: $("#player-register").offset().top -400
+  }, 2000);
 
 if(game == 'fn'){
   e.preventDefault();
@@ -60,7 +63,15 @@ if(game == 'fn'){
 });
 
 btnReg.innerHTML = 'SUCCESS';
+$('#register-header').html(user_name.value + ' You have succesfully registered for Fortnite !');
+$('html, body').animate({
+  scrollTop: $("#player-register").offset().top -400
+}, 2000);
+$('#reg-button').html('RETURN HOME');
+$("#reg-button").attr("href", "https://fingerprint-za.web.app/");
 setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
+
+
 
   
 }else if(game == 'cs'){
@@ -86,6 +97,12 @@ setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 });
 
 btnReg.innerHTML = 'SUCCESS';
+$('#register-header').html(user_name.value + ' You have succesfully registered for CS:GO !');
+$('html, body').animate({
+  scrollTop: $("#player-register").offset().top -400
+}, 2000);
+$('#reg-button').html('RETURN HOME');
+$("#reg-button").attr("href", "https://fingerprint-za.web.app/");
 setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
   
 }else{
@@ -102,3 +119,5 @@ function changeToUpperCase(t) {
   var eleVal = document.getElementById(t.id);
   eleVal.value= eleVal.value.toUpperCase().replace(/ /g,'');
 }
+
+

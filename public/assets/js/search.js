@@ -29,7 +29,7 @@ const input = document.getElementById('user-q').value;
         var player_name = document.getElementById('player-name').innerHTML = "We found this for " + input;
       }else{
         erroData();
-        var player_name = document.getElementById('player-name').innerHTML = "We couldn't find a player name called " + input;
+        var player_name = document.getElementById('player-name').innerHTML = "We couldn't find a player named " + input;
       }
       
   
