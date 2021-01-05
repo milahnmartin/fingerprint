@@ -30,6 +30,12 @@ const input = document.getElementById('user-q').value;
         var player_name = document.getElementById('player-name').innerHTML = "We found this for " + input + " !";
         var dym_text = document.getElementById('dym').innerHTML = '';
         var dym_text = document.getElementById('player-dym').innerHTML = '';
+        
+          $('html, body').animate({
+            scrollTop: $(".fa-desktop").offset().top +510
+          }, 2000);
+       
+        
       }else{
         erroData();
 
