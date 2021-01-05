@@ -3,6 +3,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
     var uid = user.uid;
     const welcome_user = document.getElementById('welcome-name').innerHTML = "Welcome " + user.displayName;
+    
   
  
     // ...
