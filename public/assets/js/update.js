@@ -42,8 +42,11 @@ const database = firebase.database();
 const rootRefCS = database.ref('users/CS');
 const rootRefFN = database.ref('users/FN');
 
-
-
+var mouse_check = document.getElementById('mouse-check');
+mouse_check.addEventListener('click',()=>{
+  $('#mouse').addClass(".show");
+  $('#submit').addClass('.show');
+})
 
 btnReg.addEventListener('click', (e) => {
 
