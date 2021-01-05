@@ -43,6 +43,8 @@ const input = document.getElementById('user-q').value;
           var player_name = document.getElementById('player-name').innerHTML = "We couldn't find a player named " + input + " :(";
           var dym_text = document.getElementById('dym').innerHTML = 'Did you mean: ';
           var dym_text = document.getElementById('player-dym').innerHTML = dymm[0] + " ?";
+        
+
           });
           
         
@@ -58,10 +60,7 @@ const input = document.getElementById('user-q').value;
 });
 
 
-
-
-
-
+ 
 
 
 

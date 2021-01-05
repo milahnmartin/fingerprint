@@ -78,6 +78,7 @@ setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 }else if(game == 'cs'){
   e.preventDefault();
   rootRefCS.child(user_name.value).set({
+    name: user_name.value,
     platform: platform.value,
     keyboard: keyboard.value,
     mouse: mouse.value,
@@ -115,6 +116,8 @@ setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 }
 
 });
+
+
     
 function changeToUpperCase(t) {
   var eleVal = document.getElementById(t.id);
