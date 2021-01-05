@@ -4,11 +4,11 @@ const fnBTN = document.getElementById('fn-click');
 
 
 fnBTN.addEventListener('click',() => {
-  window.open('https://fingerprint-za.web.app/fortnite');
+  window.location.assign('./fortnite');
   });
 
   csBTN.addEventListener('click',() => {
-    window.open('https://fingerprint-za.web.app/csgo');
+    window.location.assign('./csgo');
     });
   
     $("#goto-players").click(function() {

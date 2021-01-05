@@ -1174,11 +1174,21 @@ footer .sub-footer a {
 		letter-spacing: 0px;
 	}
 	.functional-buttons {
-		margin-left: 7.5%;
+		width:200px;
 	}
 	.functional-buttons	ul li {
 		display: inline-block;
-		margin-left: 3px;
+	
+	}
+
+	#reg-button{
+		position: relative;
+		left: -10px !important;
+		top: -0px !important;
+	}
+	#update-button{
+		position: relative;
+		left: -5px !important;
 	}
 	.navbar .navbar-toggler {
 		right: 20px;
@@ -1211,6 +1221,20 @@ footer .sub-footer a {
 
 }
 
+.google-sign-in{
+	position: relative !important;
+	top: -500px !important;
+	margin: 0 !important;
+	
+}
+
+
+
+
+#google-click{
+	margin-right: 0 !important;
+}
+
 }
 
 
@@ -1234,4 +1258,12 @@ footer .sub-footer a {
 	top: 40px;
 }
 /* New Milahn updates */
+img.pointer {
+	cursor: pointer;
+}
+/* img:hover {
+	border: 3px solid white;
+	background-color: white;
+} */
+
 

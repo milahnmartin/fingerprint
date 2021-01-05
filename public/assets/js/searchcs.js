@@ -29,6 +29,7 @@ const input = document.getElementById('user-q').value;
         
         var player_name = document.getElementById('player-name').innerHTML = "We found this for " + input + " !";
         var dym_text = document.getElementById('dym').innerHTML = '';
+        var dym_text = document.getElementById('player-dym').innerHTML = '';
       }else{
         erroData();
 
