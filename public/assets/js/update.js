@@ -1,7 +1,8 @@
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
+
     var uid = user.uid;
-    
+ 
     // ...
   } else {
     window.location.assign('./login');

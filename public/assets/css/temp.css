@@ -1162,6 +1162,8 @@ footer .sub-footer a {
 		margin-top: 20px;
 	}
 }
+/* Iphone 8Plus */
+
 
 
 @media (max-width: 576px) {
@@ -1222,10 +1224,19 @@ footer .sub-footer a {
 }
 
 .google-sign-in{
-	position: relative !important;
-	top: -500px !important;
+	display: block !important;
+	position: absolute !important;
+	top: 530px !important;
+	left: 100px !important;
 	margin: 0 !important;
 	
+}
+
+#twitter-click{
+	position: relative;
+	left: 2px !important;
+	width: 186px!important;
+	margin-top: 25px;
 }
 
 
