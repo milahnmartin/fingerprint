@@ -43,6 +43,7 @@ if(user_name.value == ""){
 if(game == 'fn'){
   e.preventDefault();
   rootRefFN.child(user_name.value).set({
+    name: user_name.value,
     platform: platform.value,
     keyboard: keyboard.value,
     mouse: mouse.value,
