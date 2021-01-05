@@ -69,7 +69,7 @@ $('html, body').animate({
   scrollTop: $("#player-register").offset().top -400
 }, 2000);
 $('#reg-button').html('RETURN HOME');
-$("#reg-button").attr("href", "https://fingerprint-za.web.app/");
+$("#reg-button").attr("href", "./index");
 setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 
 
@@ -104,7 +104,7 @@ $('html, body').animate({
   scrollTop: $("#player-register").offset().top -400
 }, 2000);
 $('#reg-button').html('RETURN HOME');
-$("#reg-button").attr("href", "https://fingerprint-za.web.app/");
+$("#reg-button").attr("href", "./index");
 setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
   
 }else{
