@@ -36,7 +36,7 @@ const input = document.getElementById('user-q').value;
             scrollTop: $(".fa-desktop").offset().top +510
           }, 2000);
        document.getElementById('player-header-info').innerHTML = input + " Peripherals"
-       document.getElementById('player-basic-info').innerHTML = input + " basic Info"
+       document.getElementById('player-basic-info').innerHTML = data.info
         document.getElementById('monitor-info').innerHTML = data.monitor;
         document.getElementById('player-ping').innerHTML = data.ping;
         document.getElementById('player-mouse').innerHTML = data.mouse;
