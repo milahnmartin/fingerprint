@@ -2,12 +2,18 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
 
     var uid = user.uid;
+    const welcome_user = document.getElementById('welcome-name').innerHTML = "Welcome " + user.displayName;
+  
  
     // ...
   } else {
     window.location.assign('./login');
   }
 });
+
+
+
+
 
 const user_name = document.getElementById('name');
 const platform = document.getElementById('platform');
