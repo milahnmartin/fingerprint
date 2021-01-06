@@ -8,18 +8,18 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - UPDATE</title>
+    <title>ZA FINGERPRINT - MOUSE</title>
     <link rel="icon" 
       type="image/png" 
-      href="./assets/images/fingerprint-b.png">
+      href="../assets/images/fingerprint-b.png">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/temp.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/temp.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
 
   </head>
 
@@ -39,14 +39,14 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2><img src="./assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;"><em></em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2><img src="../assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;"><em></em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive" style="position: relative; left: -55px;">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link" href="../index.html">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
@@ -75,44 +75,104 @@
     
     <!-- Heading Starts Here -->
     <div class="page-heading header-text">
-      <div class="container" style="height: 80vh;">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h1 id="welcome-name">Welcome</h1>
-            <h1 id="register-header">Update Player</h1>
-            <p><a id="player-register" target="__blank" href="">Home</a> / <span>Player Update</span></p>
+            <h1 id="register-header">Mouse Update</h1>
+            <p><a id="player-register" target="__blank" href="">Home</a> / <span>Mouse Update</span></p>
           </div>
         </div>
       </div>
     </div>
     <!-- Heading Ends Here -->
+<div class="radio-group reg-group">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="fn">
+      <label class="form-check-label" for="inlineRadio1">Update Fortnite</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="cs">
+      <label class="form-check-label" for="inlineRadio2">Update CS:GO</label>
+    </div>
+    </div>
 
 
     <!-- CHOOSE -->
   <div class="choose-update d-flex justify-content-center">
-    <div class="dropdown" style="margin-top: -700px;">
+    <div class="dropdown" style="margin-top: 30px;">
       <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Choose Update
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="./update/mouse">Mouse</a>
-        <a class="dropdown-item" href="./update/keyboard">Keyboard</a>
-        <a class="dropdown-item" href="./update/cpu">CPU</a>
-        <a class="dropdown-item" href="./update/gpu">GPU</a>
-        <a class="dropdown-item" href="./update/headset">Headset</a>
-        <a class="dropdown-item" href="./update/motherboard">Motherboard</a>
-        <a class="dropdown-item" href="./update/monitor">Monitor</a>
-        <a class="dropdown-item" href="./update/platform">Platform</a>
-        <a class="dropdown-item" href="./update/ram">Ram</a>
-        <a class="dropdown-item" href="./updae/sensitivity">Sensitivity</a>
-        <a class="dropdown-item" href="./update/ping">Average Ping</a>
-        <a class="dropdown-item" href="./update/team">Team Status</a>
-        <a class="dropdown-item" href="./update/controller">Controller</a>
+        <a class="dropdown-item" href="#">Mouse</a>
+        <a class="dropdown-item" href="#">Keyboard</a>
+        <a class="dropdown-item" href="#">CPU</a>
+        <a class="dropdown-item" href="#">GPU</a>
+        <a class="dropdown-item" href="#">Headset</a>
+        <a class="dropdown-item" href="#">Motherboard</a>
+        <a class="dropdown-item" href="#">Monitor</a>
+        <a class="dropdown-item" href="#">Platform</a>
+        <a class="dropdown-item" href="#">Ram</a>
+        <a class="dropdown-item" href="#">Sensitivity</a>
+        <a class="dropdown-item" href="#">Average Ping</a>
+        <a class="dropdown-item" href="#">Team Status</a>
+        <a class="dropdown-item" href="#">Controller</a>
       </div>
     </div>
   </div>
     
     <!-- Contact Us Starts Here -->
+    <div class="contact-us check">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-form">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="Your Gaming Name" onkeyup="changeToUpperCase(this)">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="update" placeholder="Enter new Mouse Name" >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 update-btn">
+                    <button type="button" class="btn btn-outline-primary" id="submit">UPDATE</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-content">
+              <div class="section-heading">
+                <span>UPDATE INFO</span>
+                <h2>Important Update Info</h2>
+                <p>Welcome to the player update page, all we want from you here is simply to enter Your Gaming Name of the player you wish to update, aswell as the property you wish to update, then simply press the Update button and you will be all good to go.</p>
+              </div>
+              <div class="row check">
+                <div class="col-md-6 col-sm-12">
+                  <ul style="font-size: 15px;">
+                    <li><i class="fa fa-phone"></i></li>
+                    <li><i class="fa fa-support"></i>info.zafingerprint</li>
+                  </ul>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <ul  >
+                    <li><i class="fa fa-envelope"></i>info.zafingerprint</li>
+                    <li><i class="fa fa-globe"></i>Not Availible</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Contact Us Ends Here -->
 
 
@@ -245,15 +305,15 @@
     <!-- Footer Ends Here -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     
 
     <!-- Additional Scripts -->
 
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/accordions.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/owl.js"></script>
+    <script src="../assets/js/accordions.js"></script>
    
 
 
@@ -296,7 +356,109 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script src="./assets/js/update.js"></script>
-<script src="./assets/js/redirect.js"></script>
+<!-- UPDATING SIDE -->
+<script>
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+
+    var uid = user.uid;
+    const welcome_user = document.getElementById('welcome-name').innerHTML = "Welcome " + user.displayName;
+    
+  
+ 
+    // ...
+  } else {
+    window.location.assign('../login');
+  }
+});
+
+
+
+
+
+const user_name = document.getElementById('name');
+const update = document.getElementById('update');
+const btnReg = document.getElementById('submit');
+
+
+
+const database = firebase.database();
+const rootRefCS = database.ref('users/CS');
+const rootRefFN = database.ref('users/FN');
+
+
+$(document).on('change', "input:radio[name ='inlineRadioOptions']", function (event) {
+  $('.check').show();
+});
+btnReg.addEventListener('click', (e) => {
+
+var game = $("input:radio[name ='inlineRadioOptions']:checked").val();
+
+if(user_name.value == ""){
+  btnReg.innerHTML = 'ERROR';
+  alert('Required Fields are empty ...')
+  setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
+}else{ 
+  $('html, body').animate({
+    scrollTop: $("#player-register").offset().top -400
+  }, 2000);
+
+if(game == 'fn'){
+  e.preventDefault();
+  const newDataFN = {
+    mouse: update.value
+  };
+  rootRefFN.child(user_name.value).update(newDataFN);
+
+btnReg.innerHTML = 'SUCCESS';
+$('#register-header').html('You have succesfully updated ' + user_name.value);
+$('html, body').animate({
+  scrollTop: $("#player-register").offset().top -400
+}, 2000);
+$('#reg-button').html('RETURN HOME');
+$("#reg-button").attr("href", "./index");
+setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
+
+
+
+  
+}else if(game == 'cs'){
+  e.preventDefault();
+  const newDataCS = {
+    mouse: update.value
+  };
+  rootRefCS.child(user_name.value).update(newDataCS);
+
+btnReg.innerHTML = 'SUCCESS';
+$('#register-header').html('You have succesfully updated ' + user_name.value);
+$('html, body').animate({
+  scrollTop: $("#player-register").offset().top -400
+}, 2000);
+$('#reg-button').html('RETURN HOME');
+$("#reg-button").attr("href", "./index");
+setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
+  
+}else{
+  btnReg.innerHTML = 'ERROR';
+  alert('No Game Was Selected ...')
+  setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
+}
+  
+}
+
+});
+
+
+    
+function changeToUpperCase(t) {
+  var eleVal = document.getElementById(t.id);
+  eleVal.value= eleVal.value.toUpperCase().replace(/ /g,'');
+};
+
+
+
+</script>
+<!-- UPDATING ENDS -->
+<script src="../assets/js/redirect.js"></script>
   </body>
 </html>
