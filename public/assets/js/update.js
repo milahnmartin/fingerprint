@@ -42,15 +42,14 @@ const database = firebase.database();
 const rootRefCS = database.ref('users/CS');
 const rootRefFN = database.ref('users/FN');
 
-var mouse_check = document.getElementById('mouse-check');
-mouse_check.addEventListener('click',()=>{
-  $('#mouse').addClass(".show");
-  $('#submit').addClass('.show');
-})
 
+$(document).on('change', "input:radio[name ='inlineRadioOptions']", function (event) {
+  $('.check').show();
+});
 btnReg.addEventListener('click', (e) => {
 
 var game = $("input:radio[name ='inlineRadioOptions']:checked").val();
+
 if(user_name.value == ""){
   btnReg.innerHTML = 'ERROR';
   alert('Required Fields are empty ...')
@@ -63,7 +62,22 @@ if(user_name.value == ""){
 if(game == 'fn'){
   e.preventDefault();
   const newDataFN = {
-    mouse: mouse.value
+    platform: platform.value,
+    keyboard: keyboard.value,
+    mouse: mouse.value,
+    headset: headset.value,
+    monitor: monitor.value,
+    sens: sens.value,
+    cpu: cpu.value,
+    gpu: gpu.value,
+    ram: ram.value,
+    mobo: mobo.value,
+    controller: controller.value,
+    ping: ping.value,
+    res: res.value,
+    signed: signed.value,
+    info: info.value,
+    main_social:main_social.value
   };
   rootRefFN.child(user_name.value).update(newDataFN);
 
@@ -82,7 +96,22 @@ setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
 }else if(game == 'cs'){
   e.preventDefault();
   const newDataCS = {
-
+    platform: platform.value,
+    keyboard: keyboard.value,
+    mouse: mouse.value,
+    headset: headset.value,
+    monitor: monitor.value,
+    sens: sens.value,
+    cpu: cpu.value,
+    gpu: gpu.value,
+    ram: ram.value,
+    mobo: mobo.value,
+    controller: controller.value,
+    ping: ping.value,
+    res: res.value,
+    signed: signed.value,
+    info: info.value,
+    main_social:main_social.value
   };
   rootRefCS.child(user_name.value).update(newDataCS);
 
