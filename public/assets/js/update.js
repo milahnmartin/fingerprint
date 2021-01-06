@@ -1,6 +1,20 @@
+
+
+const whurl = "https://discord.com/api/webhooks/796473326000144445/S_LA1NUDAo3_gvgOvr1jORlVuNp4Cc_o5-4xho0nH1FG-GYiiXoT5bVsIfkTxksOalL4";
+function welcomeDiscord(user){
+  const msg = {
+    "content": "User " + user.displayName + " Just Logged In with " + user.email
+  }
+
+  fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
+  "body": JSON.stringify(msg)});
+
+}
+
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-
+    welcomeDiscord(user);
     var uid = user.uid;
     const welcome_user = document.getElementById('welcome-name').innerHTML = "Welcome " + user.displayName;
     

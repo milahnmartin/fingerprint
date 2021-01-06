@@ -1,0 +1,22 @@
+{
+  "name": "fingerprint",
+  "version": "1.0.0",
+  "description": "Milahn Martin owner of fingerprintza front end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milahnmartin/fingerprint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milahnmartin/fingerprint/issues"
+  },
+  "homepage": "https://github.com/milahnmartin/fingerprint#readme",
+  "dependencies": {
+    "webhook-discord": "^3.7.7"
+  }
+}
