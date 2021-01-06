@@ -2,8 +2,15 @@
 
 const whurl = "https://discord.com/api/webhooks/796473326000144445/S_LA1NUDAo3_gvgOvr1jORlVuNp4Cc_o5-4xho0nH1FG-GYiiXoT5bVsIfkTxksOalL4";
 function welcomeDiscord(user){
+  let email = user.email;
+  let valid_email;
+  if(email === null){
+    valid_email = 'Twitter'
+  }else{
+    valid_email = email;
+  }
   const msg = {
-    "content": "User " + user.displayName + " Just Logged In with " + user.email
+    "content": "User " + user.displayName + " Just Logged In with " + valid_email
   }
 
   fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
