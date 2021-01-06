@@ -358,9 +358,10 @@
 </script>
 <!-- UPDATING SIDE -->
 <script>
+  let user_info;
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-
+    user_info = user;
     var uid = user.uid;
     const welcome_user = document.getElementById('welcome-name').innerHTML = "Welcome " + user.displayName;
     
@@ -380,6 +381,17 @@ const user_name = document.getElementById('name');
 const update = document.getElementById('update');
 const btnReg = document.getElementById('submit');
 
+
+const whurl = "https://discord.com/api/webhooks/796473893207801936/EdDzH4f9KyexaGMv06KL_CjDIbKU5RKJ_TgdNEKkdZX2GIv0LJ9CVNZg4mXjQFh4t8hi";
+function updateDiscord(user,target,new_mouse){
+  const msg = {
+    "content": "User: " + user.displayName + " Email: " + user.email + " updated mouse name for " + target + " to " + new_mouse
+  }
+
+  fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
+  "body": JSON.stringify(msg)});
+
+}
 
 
 const database = firebase.database();
@@ -409,7 +421,7 @@ if(game == 'fn'){
     mouse: update.value
   };
   rootRefFN.child(user_name.value).update(newDataFN);
-
+  updateDiscord(user_info,user_name.value,update.value);
 btnReg.innerHTML = 'SUCCESS';
 $('#register-header').html('You have succesfully updated ' + user_name.value);
 $('html, body').animate({
@@ -428,7 +440,7 @@ setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
     mouse: update.value
   };
   rootRefCS.child(user_name.value).update(newDataCS);
-
+  updateDiscord(user_info,user_name.value,update.value);
 btnReg.innerHTML = 'SUCCESS';
 $('#register-header').html('You have succesfully updated ' + user_name.value);
 $('html, body').animate({

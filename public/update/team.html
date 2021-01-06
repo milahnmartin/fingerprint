@@ -439,7 +439,7 @@ setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
     signed: update.value
   };
   rootRefCS.child(user_name.value).update(newDataCS);
-
+  updateDiscord(user_info,user_name.value,update.value);
 btnReg.innerHTML = 'SUCCESS';
 $('#register-header').html('You have succesfully updated ' + user_name.value);
 $('html, body').animate({
