@@ -1140,6 +1140,12 @@ footer .sub-footer a {
 	.contact-us .right-content ul li i {
 		margin-left: 0px;
 	}
+
+	.dropdown{
+		position: relative !important;
+		top: 250px !important;
+	}
+
 	
 }
 @media (max-width: 414px) {
