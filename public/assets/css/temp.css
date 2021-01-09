@@ -1005,6 +1005,11 @@ footer .sub-footer a {
 		top: -1px;
 		height: 50px;
 	}
+
+	.dropdown{
+		position: relative !important;
+		top: 280px !important;
+	}
 }
 
 /* Responsive Style */
@@ -1141,10 +1146,7 @@ footer .sub-footer a {
 		margin-left: 0px;
 	}
 
-	.dropdown{
-		position: relative !important;
-		top: 250px !important;
-	}
+	
 
 	
 }
