@@ -997,6 +997,13 @@ footer .sub-footer a {
 	margin-bottom: -147px;
 }
 
+@media(width:1600px){
+	.dropdown{
+		position: relative !important;
+		top: 300px !important;
+	}
+}
+
 
 @media (min-width: 1600px){
 	.search-btn{
@@ -1008,7 +1015,7 @@ footer .sub-footer a {
 
 	.dropdown{
 		position: relative !important;
-		top: 280px !important;
+		top: 300px !important;
 	}
 }
 
