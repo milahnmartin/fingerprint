@@ -997,13 +997,6 @@ footer .sub-footer a {
 	margin-bottom: -147px;
 }
 
-@media(width:1600px){
-	.dropdown{
-		position: relative !important;
-		top: 300px !important;
-	}
-}
-
 
 @media (min-width: 1600px){
 	.search-btn{
@@ -1013,10 +1006,6 @@ footer .sub-footer a {
 		height: 50px;
 	}
 
-	.dropdown{
-		position: relative !important;
-		top: 300px !important;
-	}
 }
 
 /* Responsive Style */
