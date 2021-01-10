@@ -19,11 +19,11 @@ function changeToUpperCase(t) {
 
 
 srchBTN.addEventListener('click', (e) => {
-  e.preventDefault();
-const input = document.getElementById('user-q').value;
+      e.preventDefault();
+      const input = document.getElementById('user-q').value;
 
 
-  rootRef.orderByKey().on('value', snapshot => {
+      rootRef.orderByKey().on('value', snapshot => {
     
       if(typeof(snapshot.val()[input]) === 'object'){
         showData();
