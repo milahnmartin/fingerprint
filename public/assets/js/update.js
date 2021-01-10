@@ -4,7 +4,6 @@ const whurl = "https://discord.com/api/webhooks/796473326000144445/S_LA1NUDAo3_g
 function welcomeDiscord(user){
   let email = user.email;
   let valid_email;
-  console.log(email);
   if(email == null){
     valid_email = 'Twitter'
   }else{

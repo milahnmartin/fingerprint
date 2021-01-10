@@ -59,8 +59,6 @@ srchBTN.addEventListener('click', (e) => {
         // player team info
         document.getElementById('player-team-info').innerHTML = input + " Team"
         document.getElementById('team-basic').innerHTML = input + " Team Status and Contract Status"
-        console.log(data.signed)
-        console.log(typeof(data.signed))
         if(data.signed === 'none'){
           document.getElementById('player-team-status').innerHTML = 'Player Not Currently Signed';
           document.getElementById('player-team').innerHTML = 'Free Agent';
