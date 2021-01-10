@@ -20,7 +20,7 @@ function changeToUpperCase(t) {
 
 srchBTN.addEventListener('click', (e) => {
 const input = document.getElementById('user-q').value;
-
+e.preventDefault();
 
   rootRef.orderByKey().on('value', snapshot => {
     
