@@ -17,7 +17,6 @@ function changeToUpperCase(t) {
 
 
 
-
 srchBTN.addEventListener('click', (e) => {
       e.preventDefault();
       const input = document.getElementById('user-q').value;
