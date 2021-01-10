@@ -68,7 +68,7 @@ $(document).on('change', "input:radio[name ='inlineRadioOptions']", function (ev
   $('.check').show();
 });
 btnReg.addEventListener('click', (e) => {
-
+e.preventDefault();
 var game = $("input:radio[name ='inlineRadioOptions']:checked").val();
 
 if(user_name.value == ""){
