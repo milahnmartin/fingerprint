@@ -8,7 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - MOUSE</title>
+    <title>ZA FINGERPRINT - SENS</title>
     <link rel="icon" 
       type="image/png" 
       href="../assets/images/fingerprint-b.png">
@@ -79,8 +79,8 @@
         <div class="row">
           <div class="col-md-12">
             <h1 id="welcome-name">Welcome</h1>
-            <h1 id="register-header">Mouse Update</h1>
-            <p><a id="player-register" target="__blank" href="">Home</a> / <span>Mouse Update</span></p>
+            <h1 id="register-header">Sensitivity Update</h1>
+            <p><a id="player-register" target="__blank" href="">Home</a> / <span>Sensitivity Update</span></p>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
                   </div>
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="subject" type="text" id="update" placeholder="Enter new Mouse Name" >
+                      <input name="subject" type="text" id="update" placeholder="Enter new Sens" >
                     </fieldset>
                   </div>
                   <div class="col-lg-12 update-btn">
@@ -391,9 +391,9 @@ const btnReg = document.getElementById('submit');
 
 
 const whurl = "https://discord.com/api/webhooks/796473893207801936/EdDzH4f9KyexaGMv06KL_CjDIbKU5RKJ_TgdNEKkdZX2GIv0LJ9CVNZg4mXjQFh4t8hi";
-function updateDiscord(user,target,new_mouse){
+function updateDiscord(user,target,new_sens){
   const msg = {
-    "content": "User: " + user.displayName + " Email: " + user.email + " updated mouse name for " + target + " to " + new_mouse
+    "content": "User: " + user.displayName + " Email: " + user.email + " updated mouse name for " + target + " to " + new_sens
   }
 
   fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
@@ -428,7 +428,7 @@ if(user_name.value == ""){
 if(game == 'fn'){
   e.preventDefault();
   const newDataFN = {
-    mouse: update.value
+    sens: update.value
   };
   rootRefFN.child(user_name.value).update(newDataFN);
   updateDiscord(user_info,user_name.value,update.value);
@@ -447,7 +447,7 @@ setTimeout(function(){ btnReg.innerHTML='UPDATE'; }, 4000);
 }else if(game == 'cs'){
   e.preventDefault();
   const newDataCS = {
-    mouse: update.value
+   sens: update.value
   };
   rootRefCS.child(user_name.value).update(newDataCS);
   updateDiscord(user_info,user_name.value,update.value);
