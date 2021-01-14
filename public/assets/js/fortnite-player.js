@@ -14,7 +14,7 @@ rootRef.on('value', data => {
         let ping = element.val().ping;
         let player_team_status;
         let new_ping = " ";
-        let alp = ['a','b','c','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+     
         for(let i = 0 ;i < 3;i++){
            new_ping += ping[i];
             
