@@ -9,7 +9,7 @@
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - FORTNITE</title>
+    <title>ZA FINGERPRINT - FN/PLAYERS</title>
     <link rel="icon" 
       type="image/png" 
       href="./assets/images/fingerprint-b.png">
@@ -26,13 +26,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/temp.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
 
-Host Cloud Template
-
-https://templatemo.com/tm-541-host-cloud
-
--->
   </head>
 
   <body>
@@ -86,24 +80,13 @@ https://templatemo.com/tm-541-host-cloud
     <!-- Page Content -->
     <!-- Heading Starts Here -->
     <div class="page-heading header-text">
-      <span class="badge badge-pill badge-info" style="cursor: pointer;position:relative;top: -20px;" ondblclick="redirect()">VIEW ALL FORTNITE PLAYERS</span>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 id="player-name">Search Fortnite Player</h1>
+            <h1 id="player-name">CS:GO Players</h1>
             <h4 id="dym" style="color: white;"><h4 id="player-dym" style="color: #00FBFF;"></h4></h4>
-            <p><a href="index.html">Go Back</a> / <span>Fortnite</span></p>
-            <div id="search-section">
-              <form id="suggestion_form" name="gs" method="get" action="#">
-              <div class="searchText">
-                <input type="text" name="q" id="user-q" style="position: relative;top: 30px;width: 300px;height: 35px;color: black;" class="searchText" placeholder="Search" autocomplete="on" onkeyup="changeToUpperCase(this)">
-              </div>
-                  <!-- <input type="submit" name="results" class="main-button" value="Search Nowww"> -->
-                  <button type="submit" id="search-q" class="main-button search-btn btn btn-primary btn-lg" style="font-size:19px; position: relative;top: 70px;left: 7px;">SEARCH</button>
-               </form>
-              <div class="advSearch_chkbox">
-              </div>
-              </div>
+            <p><a href="index.html">Go Back</a> / <span>CS:GO</span></p>
+           
           </div>
         </div>
       </div>
@@ -111,145 +94,25 @@ https://templatemo.com/tm-541-host-cloud
     <!-- Heading Ends Here -->
 
 
-    <!-- Services Starts Here -->
-    <div class="services-section services-page waiting">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <span >Player Info</span>
-              <h2 id="player-header-info">Info surrounding player peripherals</h2>
-              <p id="player-basic-info">Player Basic Info</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="fa fa-desktop"></i>
-              <h4>Monitor Settings</h4>
-              <p id="monitor-info">Monitor Info</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="fa fa-server"></i>
-              <h4>Average Ping</h4>
-              <p id="player-ping">Player Ping</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="mouse-svg"> <img class="mouse" src="./assets/images/mouse-solid.svg" style="height: 40px;"></i>
-              <h4>Mouse</h4>
-              <p id="player-mouse">Player Mouse</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="keyboard-svg"> <img class="mouse" src="./assets/images/keyboard-regular.svg" style="height: 40px;"></i>
-              <h4>Keyboard</h4>
-              <p id="player-keyboard">Player Keyboard</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="headset-svg"> <img class="mouse" src="./assets/images/headset-solid.svg" style="height: 40px;"></i>
-              <h4>Headset</h4>
-              <p id="player-headset">Player Headset</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="controller-svg"> <img class="mouse" src="./assets/images/controller-solid.svg" style="height: 40px;"></i>
-              <h4>Controller</h4>
-              <p id="player-controller">Controller Info.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Services Ends Here -->
+    <!-- TABLE -->
+    <table class="table table-dark" >
+      <thead>
+        <tr >
+          <th scope="col" >Player:</th>
+          <th scope="col">Gamertag</th>
+          <!-- <th scope="col">Social</th> -->
+        </tr>
+      </thead>
+      <tbody id="sheet">
+       
 
-    <!-- Second Service Starts Here -->
-    <div class="services-section services-page waiting">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <span>Player Platform</span>
-              <h2 id="player-platform-info">Info surrounding player platform</h2>
-              <p id="player-basic">Player Basic Platform info</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="ram-svg"> <img class="mouse" src="./assets/images/memory-solid.svg" style="height: 40px;"></i>
-              <h4>RAM</h4>
-              <p id="player-ram">Player RAM</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="fa fa-server"></i>
-              <h4>Motherboard</h4>
-              <p id="player-motherboard">Player Motherboard</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <i class="ram-svg"> <img class="mouse" src="./assets/images/microchip-solid.svg" style="height: 40px;"></i>
-              <h4>CPU</h4>
-              <p id="player-cpu">Player CPU</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 mx-auto">
-            <div class="service-item">
-              <i class="ram-svg"> <img class="mouse" src="./assets/images/microchip-solid.svg" style="height: 40px;"></i>
-              <h4>GPU</h4>
-              <p id="player-gpu">Player GPU</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+     
 
-    <!-- Second service Ends Here -->
-<!-- Third Services -->
-<div class="services-section services-page waiting">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="section-heading">
-          <span>Player Team</span>
-          <h2 id="player-team-info">Info surrounding player contact and teams</h2>
-          <p id="team-basic">Player Team Status and Contract Status</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="service-item">
-          <i class="ram-svg"> <img class="mouse" src="./assets/images/team-solid.svg" style="height: 40px;"></i>
-          <h4>Team Status</h4>
-          <p id="player-team-status">Player Signed or Not</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="service-item">
-          <i class="ram-svg"> <img class="mouse" src="./assets/images/team-solid.svg" style="height: 40px;"></i>
-          <h4>Team Name</h4>
-          <p id="player-team">Team Name</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="service-item">
-          <i class="ram-svg"> <img class="mouse" src="./assets/images/team-solid.svg" style="height: 40px;"></i>
-          <h4 id="player-contract">Contract Length</h4>
-          <p>Player Contract Length</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Third Services End -->
+      </tbody>
+    </table>
 
+ 
+<!-- TABLE END -->
     <!-- Testimonials Starts Here -->
     <div class="testimonials-section">
       <div class="container">
@@ -408,7 +271,7 @@ https://templatemo.com/tm-541-host-cloud
   firebase.analytics();
 </script>
 
-    <script src="./assets/js/search.js"></script>
-    <script src="./assets/js/redirect.js"></script>
+    <script src="./assets/js/cs-players.js"></script>
+   
   </body>
 </html>

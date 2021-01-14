@@ -1,5 +1,5 @@
 const database = firebase.database();
-const rootRef = database.ref('users/FN');
+const rootRef = database.ref('users/CS');
 
 
 

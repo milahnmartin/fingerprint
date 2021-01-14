@@ -125,3 +125,8 @@ function erroData(){
     }, 5000);
   });
 }
+
+
+let redirect = () => {
+  window.location.assign('./csgo-players');
+}
