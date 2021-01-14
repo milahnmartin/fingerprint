@@ -1260,6 +1260,10 @@ footer .sub-footer a {
 	top: -200px !important;
 }
 
+#ping-column{
+	width: 2px !important;
+}
+
 }
 
 
