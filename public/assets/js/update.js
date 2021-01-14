@@ -162,4 +162,3 @@ function changeToUpperCase(t) {
   eleVal.value= eleVal.value.toUpperCase().replace(/ /g,'');
 };
 
-
