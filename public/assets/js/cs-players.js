@@ -11,6 +11,7 @@ rootRef.on('value', data => {
         let user = element.key;
         let player_signed = element.val().signed;
         let main_social = element.val().main_social;
+        let ping = element.val().ping;
         let player_team_status;
 
         if (player_signed === 'None' || player_signed === 'none' || player_signed === "" || player_signed === 'Not signed'){
@@ -23,6 +24,7 @@ rootRef.on('value', data => {
     <tr>
     <th scope="row">${i}</th>
     <td>${user}</td>
+    <td>${ping}</td>
     <td>${player_team_status}</td>
   </tr>
   `
