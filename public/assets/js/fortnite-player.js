@@ -14,16 +14,16 @@ rootRef.on('value', data => {
         let player_team_status;
 
         if (player_signed === 'None' || player_signed === 'none' || player_signed === "" || player_signed === 'Not signed'){
-            player_team_status = 'Free Agent'
+            player_team_status = 'F'
         }else{
-            player_team_status = player_signed;
+            player_team_status = 'S';
         }
     $('#sheet').append(
     ` 
     <tr>
     <th scope="row">${i}</th>
     <td>${user}</td>
-   
+    <td>${player_team_status}</td>
   </tr>
   `
     );
