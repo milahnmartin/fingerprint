@@ -8,7 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - REGISTER</title>
+    <title>ZA FINGERPRINT - DETAIL</title>
     <link rel="icon" 
       type="image/png" 
       href="./assets/images/fingerprint-b.png">
@@ -63,7 +63,7 @@
           </div>
           <div class="functional-buttons">
             <ul>
-              <li><a target="__blank" id="reg-button" href="#">Register</a></li>
+              <li><a target="__blank" id="reg-button" href="./register.html">Register</a></li>
               <li><a target="__blank" id="update-button" href="./update">Update</a></li>
             </ul>
           </div>
@@ -77,7 +77,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 id="register-header">Register Yourself</h1>
+            <h1 id="register-header">Now Let's Get More Detailed Data</h1>
             <p><a id="player-register" target="__blank" href="">Home</a> / <span>Player Register</span></p>
           </div>
         </div>
@@ -110,16 +110,79 @@
                   </div>
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="subject" type="text" id="ping" placeholder="Your Average Ping" >
+                      <input name="subject" type="text" id="platform" placeholder="PC or Console" >
                     </fieldset>
                   </div>
                   <div class="col-md-12 col-sm-12">
                     <fieldset>
-                      <input name="subject" type="text" id="signed" placeholder="Signed ('If signed type Team Name, if not type 'none')" >
+                      <input name="email" type="text" id="keyboard" placeholder="Your Keyboard (if on console type 'none')" >
                     </fieldset>
                   </div>
-                
-               
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="mouse" placeholder="Your mouse (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="headset" placeholder="Your Headset">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="monitor" placeholder="Your Monitor (Include refresh rate and response time)" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="sens" placeholder="Your InGame Sensitivity" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="cpu" placeholder="Your CPU (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="gpu" placeholder="Your GPU (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="ram" placeholder="Your Ram (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="mobo" placeholder="Your Motherboard (If on console type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="controller" placeholder="Your Controller [Ps4,Xbox etc] (Of on PC type 'none')" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="res" placeholder="Your Resolution" >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="debut" placeholder="Game Debut ('When did you first start playing ?')"">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" id="info" placeholder="Short Information about Yourself" ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" id="main-social" placeholder="Your Main Social Media Link">
+                    </fieldset>
+                  </div>
                   
                   <div class="col-lg-12">
                     <button type="button" class="btn btn-outline-primary" id="submit">REGISTER</button>
@@ -343,7 +406,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script src="./assets/js/register.js"></script>
+<script src="./assets/js/detailed-register.js"></script>
 <script src="./assets/js/redirect.js"></script>
   </body>
 </html>

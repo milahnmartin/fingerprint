@@ -1,22 +1,7 @@
 
 const user_name = document.getElementById('name');
-const platform = document.getElementById('platform');
-const info = document.getElementById('info');
-const keyboard = document.getElementById('keyboard');
-const mouse = document.getElementById('mouse');
-const headset = document.getElementById('headset');
-const monitor = document.getElementById('monitor');
-const sens = document.getElementById('sens');
-const cpu = document.getElementById('cpu');
-const gpu = document.getElementById('gpu');
-const ram = document.getElementById('ram');
-const mobo = document.getElementById('mobo');
-const controller = document.getElementById('controller');
-const ping = document.getElementById('ping');
-const res = document.getElementById('res');
-const debut = document.getElementById('debut');
+const ping = document.getElementById('ping')
 const signed = document.getElementById('signed');
-const main_social = document.getElementById('main-social');
 const btnReg = document.getElementById('submit');
 
 
@@ -44,23 +29,8 @@ if(game == 'fn'){
   e.preventDefault();
   rootRefFN.child(user_name.value).set({
     name: user_name.value,
-    platform: platform.value,
-    keyboard: keyboard.value,
-    mouse: mouse.value,
-    headset: headset.value,
-    monitor: monitor.value,
-    sens: sens.value,
-    cpu: cpu.value,
-    gpu: gpu.value,
-    ram: ram.value,
-    mobo: mobo.value,
-    controller: controller.value,
     ping: ping.value,
-    res: res.value,
-    debut: debut.value,
-    signed: signed.value,
-    info: info.value,
-    main_social:main_social.value
+    signed: signed.value
 });
 
 btnReg.innerHTML = 'SUCCESS';
@@ -68,8 +38,8 @@ $('#register-header').html(user_name.value + ' You have succesfully registered f
 $('html, body').animate({
   scrollTop: $("#player-register").offset().top -400
 }, 2000);
-$('#reg-button').html('RETURN HOME');
-$("#reg-button").attr("href", "./index");
+$('#reg-button').html('GIVE MORE DETAIL');
+$("#reg-button").attr("href", "./detail-register");
 setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 
 
@@ -79,23 +49,8 @@ setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
   e.preventDefault();
   rootRefCS.child(user_name.value).set({
     name: user_name.value,
-    platform: platform.value,
-    keyboard: keyboard.value,
-    mouse: mouse.value,
-    headset: headset.value,
-    monitor: monitor.value,
-    sens: sens.value,
-    cpu: cpu.value,
-    gpu: gpu.value,
-    ram: ram.value,
-    mobo: mobo.value,
-    controller: controller.value,
     ping: ping.value,
-    res: res.value,
-    debut: debut.value,
-    signed: signed.value,
-    info: info.value,
-    main_social:main_social.value
+    signed: signed.value
 });
 
 btnReg.innerHTML = 'SUCCESS';
@@ -103,8 +58,8 @@ $('#register-header').html(user_name.value + ' You have succesfully registered f
 $('html, body').animate({
   scrollTop: $("#player-register").offset().top -400
 }, 2000);
-$('#reg-button').html('RETURN HOME');
-$("#reg-button").attr("href", "./index");
+$('#reg-button').html('GIVE MORE DETAIL');
+$("#reg-button").attr("href", "./detail-register");
 setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
   
 }else{
