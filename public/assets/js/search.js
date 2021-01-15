@@ -39,7 +39,7 @@ srchBTN.addEventListener('click', (e) => {
        document.getElementById('player-basic-info').innerHTML = data.info
         document.getElementById('monitor-info').innerHTML = data.monitor;
         document.getElementById('player-ping').innerHTML = data.ping;
-        document.getElementById('player-mouse').innerHTML = data.mouse;
+        document.getElementById('player-mouse').innerHTML = data.mouse + "  Sens: " + data.sens;
         document.getElementById('player-keyboard').innerHTML = data.keyboard;
         document.getElementById('player-headset').innerHTML = data.headset;
         if(data.controller === ''){
