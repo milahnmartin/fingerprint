@@ -60,7 +60,7 @@ if(game == 'fn'){
 });
 
 btnReg.innerHTML = 'SUCCESS';
-$('#register-header').html(user_name.value + ' You have succesfully registered for Fortnite !');
+$('#register-header').html(user_name.value + ' Thanks for giving extra Detail for Fortnite  !');
 $('html, body').animate({
   scrollTop: $("#player-register").offset().top -400
 }, 2000);
@@ -93,7 +93,7 @@ setTimeout(function(){ btnReg.innerHTML='REGISTER'; }, 4000);
 });
 
 btnReg.innerHTML = 'SUCCESS';
-$('#register-header').html(user_name.value + ' You have succesfully registered for CS:GO !');
+$('#register-header').html(user_name.value + ' Thanks for giving extra Detail for CS:GO  !');
 $('html, body').animate({
   scrollTop: $("#player-register").offset().top -400
 }, 2000);
