@@ -5,21 +5,28 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - LOGIN</title>
+    <title>ZA FINGERPRINT - FEED</title>
     <link rel="icon" 
       type="image/png" 
      href="./assets/images/bluefinger.png">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4"</>
+
+    <!-- End of Font Awesome -->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/temp.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+ 
 
   </head>
 
@@ -74,43 +81,42 @@
     <!-- Page Content -->
     <!-- Heading Starts Here -->
     <div class="page-heading header-text">
-      <div class="container" style="height: 80vh;">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 id="register-header">Updating Player Requires You too Sign In</h1>
-            <p><a id="player-register" target="__blank" href="">Home</a> / <span>Login</span></p>
+            <h1 id="feed-name">Chat Feed</h1>
+            <h4 id="dym" style="color: white;"><h4 id="player-dym" style="color: #00FBFF;"></h4></h4>
+            <p><a href="index.html">Home</a> / <span>Chat Feed</span></p>
+            
+            <!-- TWEET INPUT -->
+            <div class="input-group mb-3" style="position: relative;top: 50px;">
+              <input type="text" id="message_text" class="form-control" placeholder="Enter your New Message !" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-primary" type="button" id="new_message">POST</button>
+            </div>
+            <!-- TWEET END -->
+           
           </div>
         </div>
       </div>
     </div>
     <!-- Heading Ends Here -->
 
-    <!-- Contact Us Ends Here -->
 
-<div class="google-sign-in mx-auto d-flex justify-content-center" style="position: relative;top: -600px;">
-  <img src="./assets/images/google-btn.png" class="rounded pointer" id="google-click" alt="google-button" style="margin-right: 5px;" onclick="signInWithGoogle()" >
-  <img src="./assets/images/twt-button.png" class="rounded pointer" id="twitter-click" alt="twitter-button" style="height: 42px;width: 200px;position: relative;top: 1px;" onclick="signInWithTwitter()" >
-  
-</div>
-    <!-- Map Starts Here -->
-   
+    <!-- FEED -->
     
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
-
-    <!-- Map Ends Here -->
-    
+    <div aria-live="polite" aria-atomic="true" class="position-relative" id="feed-chat">
+     
 
 
+    </div>
+
+ 
+<!-- FEED END -->
     <!-- Testimonials Starts Here -->
-     <div class="testimonials-section">
+    <div class="testimonials-section">
       <div class="container">
         <div class="row">
-          <div class="col-m\d-12">
+          <div class="col-md-12">
             <div class="section-heading">
               <span>Testimonials</span>
               <h2>What they say about us</h2>
@@ -130,9 +136,10 @@
                 <div class="icon">
                   <i class="fa fa-quote-right"></i>
                 </div>
-                <p>"Awesome to have a place where people can easily access other player in game settings and hardware"</p>
+                <p>"Awesome to have a place where people can easily access other player in game settings and hardware"
+                </p>
                 <h4>Henrie Louw</h4>
-                <span>Management / Social Media</span>
+                <span>Management</span>
               </div>
               <div class="testimonial-item">
                 <div class="icon">
@@ -141,14 +148,6 @@
                 <p>"I think its important that we have a place to keep track of players settings, components and teams/organisations they are signed to, as much as every player has a personal preference to settings and resolutions. As well as keeping track of which players are in which team/organisation. With Fingerprint we will be able to do this."</p>
                 <h4>Nobodyyyyy</h4>
                 <span>Management</span>
-              </div>
-              <div class="testimonial-item">
-                <div class="icon">
-                  <i class="fa fa-quote-right"></i>
-                </div>
-                <p>"Having a place to locally store player data will be a big help. I think being able store data such as player peripherals and background information will help to get to know players and improve your game, here at Fingerprint we are here to help!"</p>
-                <h4>Liam Vercueil</h4>
-                <span>Bot Development</span>
               </div>
             </div>
           </div>
@@ -159,7 +158,7 @@
 
 
     <!-- Footer Starts Here -->
-     <footer>
+    <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-6 col-xs-12">
@@ -178,7 +177,7 @@
                 <h2>ZA FP Socials</h2>
               </div>
               <ul class="footer-list">
-                <li><a href="https://twitter.com/fingerprintza">Twitter</a></li>
+                 <li><a href="https://twitter.com/fingerprintza">Twitter</a></li>
                 <li><a href="https://www.instagram.com/zaprintfinger/">Instagram</a></li>
                 <li><a href="./csgo">LinkedIn</a></li>
                 <li><a href="./fortnite">Youtube</a></li>
@@ -209,9 +208,9 @@
                 <h2>More Information</h2>
               </div>
               <ul class="footer-list">
-                <li>Email: <a href="./contact.html">fingerprintzaonline@gmail.com</a></li>
-                <li>Support:<a href="./contact.html">fingerprintzaonline@gmail.com</a></li>
-                <li>Website: <a href="https://fingerprintza.com">www.fingerprintza.com</a></li>
+                 <li>Email: <a href="#">fingerprintzaonline@gmail.com</a></li>
+                <li>Support:<a href="#">fingerprintzaonline@gmail.com</a></li>
+                <li>Website: <a href="#">www.fingerprintza.com</a></li>
               </ul>
             </div>
           </div>
@@ -231,30 +230,24 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Additional Scripts -->
-
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/accordions.js"></script>
-   
-
 
     <script language = "text/Javascript"> 
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside If the
+      function clearField(t){                   //declaring the array outside of the
       if(! cleared[t.id]){                      // function makes it static and global
           cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance If typos
+          t.value='';         // with more chance of typos
           t.style.color='#fff';
           }
       }
     </script>
-
-
-<!-- The core Firebase JS SDK is always  and must be listed first -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -277,7 +270,8 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/redirect.js"></script>
+  <script src="./assets/js/feed.js"></script>
+    <script src="./assets/js/feed-login.js"></script>
+   
   </body>
 </html>
