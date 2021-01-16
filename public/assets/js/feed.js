@@ -24,6 +24,7 @@ const new_messageBTN = document.getElementById('new_message');
 
 
 new_messageBTN.addEventListener('click', () => {
+  $("#feed-chat").empty();
   var user = firebase.auth().currentUser;
 
   let user_feed_message = document.getElementById('message_text').value;
