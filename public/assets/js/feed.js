@@ -23,7 +23,8 @@ firebase.auth().onAuthStateChanged((user) => {
 const new_messageBTN = document.getElementById('new_message');
 
 
-new_messageBTN.addEventListener('click', () => {
+new_messageBTN.addEventListener('click', (e) => {
+  e.preventDefault();
   $("#feed-chat").empty();
 
   var user = firebase.auth().currentUser;
