@@ -20,51 +20,49 @@ firebase.auth().onAuthStateChanged((user) => {
     }
   });
   
-const new_messageBTN = document.getElementById('new_message');
+// const new_messageBTN = document.getElementById('new_message');
 
 
-new_messageBTN.addEventListener('click', (e) => {
-  e.preventDefault();
-  $("#feed-chat").empty();
+// new_messageBTN.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   $("#feed-chat").empty();
 
-  var user = firebase.auth().currentUser;
+//   var user = firebase.auth().currentUser;
 
-  let user_feed_message = document.getElementById('message_text').value;
+//   let user_feed_message = document.getElementById('message_text').value;
 
-  rootRef.push({
-    username: user.displayName,
-    user_email: user.email,
-    user_uid: user.uid,
-   user_message: user_feed_message
- });
+//   rootRef.push({
+//     username: user.displayName,
+//     user_email: user.email,
+//     user_uid: user.uid,
+//    user_message: user_feed_message
+//  });
     
 
-});
+// });
 
 
 
 rootRef.on('value',data => {
-  $("#feed-chat").empty();
+  $("fingerprint-social-feed").empty();
     data.forEach((element) => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
 
 
-        $('#feed-chat').append(
-`<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
-
-  <!-- Then put toasts within -->
-  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="./assets/images/bluefinger.png" style="height:20px;width:20px" class="rounded me-2" alt="...">
-      <strong class="me-auto">${feed_user}</strong>
-      <small>few minutes ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body" style="position:relative;right:-24px">
-     ${feed_message}
-    </div>
-  </div>
+        $('#fingerprint-social-feed').append(
+`<div class="card text-center">
+<div class="card-header">
+  <img src="./assets/images/bluefinger.png" style="width:33px;height:33px">
+</div>
+<div class="card-body">
+  <h5 class="card-title">${feed_user}</h5>
+  <p class="card-text">${feed_message}</p>
+  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+</div>
+<div class="card-footer text-muted">
+  seconds ago
+</div>
 </div>`
         );
 

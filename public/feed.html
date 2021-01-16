@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="assets/css/owl.css">
  
 
+
+
   </head>
 
   <body>
@@ -87,13 +89,6 @@
             <h1 id="feed-name">Chat Feed</h1>
             <h4 id="dym" style="color: white;"><h4 id="player-dym" style="color: #00FBFF;"></h4></h4>
             <p><a href="index.html">Home</a> / <span>Chat Feed</span></p>
-            
-            <!-- TWEET INPUT -->
-            <div class="input-group mb-3" style="position: relative;top: 50px;">
-              <input type="text" id="message_text" class="form-control" placeholder="Enter your New Message !" aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-primary" type="submit" id="new_message">POST</button>
-            </div>
-            <!-- TWEET END -->
            
           </div>
         </div>
@@ -103,13 +98,16 @@
 
 
     <!-- FEED -->
-    
-    <div aria-live="polite" aria-atomic="true" class="position-relative" id="feed-chat">
-     
+    <nav class="navbar navbar-dark bg-dark" style="position: relative;height: 60px;">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1" style="position: relative;top: -7px;">FINGERPRINT ZA FEED</span>
+      </div>
+    </nav>
+    <!-- FEED DATA -->
 
+   <div class="fingerprint-feed" id="fingerprint-social-feed">
 
-    </div>
-
+   </div>
  
 <!-- FEED END -->
     <!-- Testimonials Starts Here -->
@@ -270,6 +268,8 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
+
   <script src="./assets/js/feed.js"></script>
     <script src="./assets/js/feed-login.js"></script>
    
