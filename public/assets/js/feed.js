@@ -31,7 +31,7 @@ new_messageBTN.addEventListener('click', (e) => {
 
   let user_feed_message = document.getElementById('message_text').value;
 
-  rootRef.child(user.displayName).push({
+  rootRef.push({
     username: user.displayName,
     user_email: user.email,
     user_uid: user.uid,
@@ -46,9 +46,8 @@ new_messageBTN.addEventListener('click', (e) => {
 rootRef.on('value',data => {
   $("#feed-chat").empty();
     data.forEach((element) => {
-     element.forEach(newE => {
-        let feed_user = newE.val().username;
-        let feed_message = newE.val().user_message;
+        let feed_user = element.val().username;
+        let feed_message = element.val().user_message;
 
 
         $('#feed-chat').append(
@@ -70,15 +69,6 @@ rootRef.on('value',data => {
         );
 
 
-
-
-
-
-
-
-
-     })
-    
 
     });
 })
