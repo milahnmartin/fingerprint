@@ -20,26 +20,28 @@ firebase.auth().onAuthStateChanged((user) => {
     }
   });
   
-// const new_messageBTN = document.getElementById('new_message');
+const new_messageBTN = document.getElementById('new_message');
 
 
-// new_messageBTN.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   $("#feed-chat").empty();
+new_messageBTN.addEventListener('click', (e) => {
+  e.preventDefault();
+  $("#feed-chat").empty();
 
-//   var user = firebase.auth().currentUser;
+  var user = firebase.auth().currentUser;
 
-//   let user_feed_message = document.getElementById('message_text').value;
+  let user_feed_message = document.getElementById('message_text').value;
 
-//   rootRef.push({
-//     username: user.displayName,
-//     user_email: user.email,
-//     user_uid: user.uid,
-//    user_message: user_feed_message
-//  });
+  rootRef.push({
+    username: user.displayName,
+    user_email: user.email,
+    user_uid: user.uid,
+   user_message: user_feed_message
+ });
     
-
-// });
+ $('html, body').animate({
+  scrollTop: $("#testimon").offset().top -750
+}, 2000);
+});
 
 const printFeed = () => {
 
@@ -51,9 +53,8 @@ rootRef.on('value',data => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
 
-        $('#fingerprint-social-feed').append(
-`<div class= "ui feed">
-
+        $('#feed-ui').append(
+          `
 <div class="event">
     <div class="label">
       <img src="./assets/images/bluefinger.png">
@@ -75,8 +76,7 @@ rootRef.on('value',data => {
       </div>
     </div>
   </div>
-
-</div>`
+`
         );
 
 
@@ -91,9 +91,3 @@ rootRef.on('value',data => {
 printFeed();
 
 
-async function doIt(){
-  return 'Hi'
-};
-console.log(doIt().then((e)=>{
-  console.log(e)
-}))
