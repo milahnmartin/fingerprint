@@ -52,18 +52,30 @@ rootRef.on('value',data => {
         let feed_message = element.val().user_message;
 
         $('#fingerprint-social-feed').append(
-`<div class="card text-center">
-<div class="card-header">
-  <img src="./assets/images/bluefinger.png" style="width:33px;height:33px">
-</div>
-<div class="card-body">
-  <h5 class="card-title">${feed_user}</h5>
-  <p class="card-text">${feed_message}</p>
-  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-</div>
-<div class="card-footer text-muted">
-  seconds ago
-</div>
+`<div class= "ui feed">
+
+<div class="event">
+    <div class="label">
+      <img src="./assets/images/bluefinger.png">
+    </div>
+    <div class="content">
+      <div class="summary">
+        <a>${feed_user}</a> posted on his page
+        <div class="date">
+          1 days ago
+        </div>
+      </div>
+      <div class="extra text">
+       ${feed_message}
+      </div>
+      <div class="meta">
+        <a class="like">
+          <i class="like icon"></i> 0 Likes
+        </a>
+      </div>
+    </div>
+  </div>
+
 </div>`
         );
 
