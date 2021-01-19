@@ -22,6 +22,7 @@ firebase.auth().onAuthStateChanged((user) => {
   
 const new_messageBTN = document.getElementById('new_message');
 
+var current_day = new Date();
 
 new_messageBTN.addEventListener('click', (e) => {
   e.preventDefault();
@@ -30,11 +31,15 @@ new_messageBTN.addEventListener('click', (e) => {
   var user = firebase.auth().currentUser;
 
   let user_feed_message = document.getElementById('message_text').value;
+let current = new Date();
+let current_day = current.toLocaleString();
+
 
   rootRef.push({
     username: user.displayName,
     user_email: user.email,
     user_uid: user.uid,
+    user_time: current_day,
    user_message: user_feed_message
  });
     
@@ -52,6 +57,7 @@ rootRef.on('value',data => {
     data.forEach((element) => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
+        let feed_time = element.val().user_time
 
         $('#feed-ui').append(
           `
@@ -61,9 +67,9 @@ rootRef.on('value',data => {
     </div>
     <div class="content">
       <div class="summary">
-        <a>${feed_user}</a> posted on his page
+        <a>${feed_user}</a> posted on this page
         <div class="date">
-          1 days ago
+          ${feed_time}
         </div>
       </div>
       <div class="extra text">
