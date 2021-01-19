@@ -40,12 +40,16 @@ let current_day = current.toLocaleString();
     user_email: user.email,
     user_uid: user.uid,
     user_time: current_day,
+    user_likes: 0,
    user_message: user_feed_message
  });
     
  $('html, body').animate({
   scrollTop: $("#testimon").offset().top -750
 }, 2000);
+
+
+$('#message_text').val("");
 });
 
 const printFeed = () => {
@@ -57,7 +61,8 @@ rootRef.on('value',data => {
     data.forEach((element) => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
-        let feed_time = element.val().user_time
+        let feed_time = element.val().user_time;
+        let feed_likes = element.val().user_likes;
 
         $('#feed-ui').append(
           `
@@ -77,7 +82,7 @@ rootRef.on('value',data => {
       </div>
       <div class="meta">
         <a class="like">
-          <i class="like icon"></i> 0 Likes
+          <i class="like icon" id="likes"></i> ${feed_likes} Likes
         </a>
       </div>
     </div>
@@ -91,9 +96,12 @@ rootRef.on('value',data => {
 })
 
 
-}
+};
+
+
 
 
 printFeed();
+
 
 
