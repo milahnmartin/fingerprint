@@ -25,7 +25,7 @@ const new_messageBTN = document.getElementById('new_message');
 
 new_messageBTN.addEventListener('click', (e) => {
   e.preventDefault();
-  $("#feed-chat").empty();
+  $("#feed-ui").empty();
 
   var user = firebase.auth().currentUser;
 
@@ -48,7 +48,7 @@ const printFeed = () => {
 
 
 rootRef.on('value',data => {
-  $("fingerprint-social-feed").empty();
+  $("feed-ui").empty();
     data.forEach((element) => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
