@@ -98,7 +98,7 @@ e.preventDefault();
   });
 
 
-
+  $('#user-q').val(" ");
 
 });
 

@@ -96,7 +96,7 @@ srchBTN.addEventListener('click', (e) => {
   });
 
 
-
+  $('#user-q').val(" ");
 
 });
 
