@@ -24,8 +24,10 @@ const new_messageBTN = document.getElementById('new_message');
 
 var current_day = new Date();
 
-new_messageBTN.addEventListener('click', (e) => {
-  e.preventDefault();
+
+function newtweet(){ 
+
+
   $("#feed-ui").empty();
 
   var user = firebase.auth().currentUser;
@@ -52,7 +54,22 @@ let user_photo = user.photoURL;
 
 
 $('#message_text').val("");
+
+
+}
+$('#message_text').keypress(function(e){
+  if(e.which == 13){//Enter key pressed
+      newtweet();//Trigger search button click event
+  }
 });
+
+
+new_messageBTN.addEventListener('click', () => {
+  newtweet()
+})
+
+
+
 
 const printFeed = () => {
 
