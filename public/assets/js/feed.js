@@ -34,6 +34,7 @@ new_messageBTN.addEventListener('click', (e) => {
 let current = new Date();
 let current_day = current.toLocaleString();
 
+let user_photo = user.photoURL;
 
   rootRef.push({
     username: user.displayName,
@@ -41,6 +42,7 @@ let current_day = current.toLocaleString();
     user_uid: user.uid,
     user_time: current_day,
     user_likes: 0,
+    user_photo:user_photo,
    user_message: user_feed_message
  });
     
@@ -63,12 +65,13 @@ rootRef.on('value',data => {
         let feed_message = element.val().user_message;
         let feed_time = element.val().user_time;
         let feed_likes = element.val().user_likes;
+        let feed_photo = element.val().user_photo;
 
         $('#feed-ui').append(
           `
 <div class="event">
     <div class="label">
-      <img src="./assets/images/bluefinger.png">
+      <img src="${feed_photo}">
     </div>
     <div class="content">
       <div class="summary">
