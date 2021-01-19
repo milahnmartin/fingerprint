@@ -17,12 +17,12 @@ function changeToUpperCase(t) {
 
 
 
-
 srchBTN.addEventListener('click', (e) => {
-const input = document.getElementById('user-q').value;
-e.preventDefault();
+      e.preventDefault();
+      const input = document.getElementById('user-q').value;
 
-  rootRef.orderByKey().on('value', snapshot => {
+
+      rootRef.orderByKey().on('value', snapshot => {
     
       if(typeof(snapshot.val()[input]) === 'object'){
         showData();
@@ -47,8 +47,6 @@ e.preventDefault();
         }else{
           document.getElementById('player-controller').innerHTML = data.controller;
         }
-        
-
         // platform info
         document.getElementById('player-platform-info').innerHTML = input + " Platform"
         document.getElementById('player-basic').innerHTML = input + " Platform Info"
@@ -60,7 +58,7 @@ e.preventDefault();
         // player team info
         document.getElementById('player-team-info').innerHTML = input + " Team"
         document.getElementById('team-basic').innerHTML = input + " Team Status and Contract Status"
-        if(data.signed === 'none'){
+        if(data.signed === 'none' || 'None' || ""){
           document.getElementById('player-team-status').innerHTML = 'Player Not Currently Signed';
           document.getElementById('player-team').innerHTML = 'Free Agent';
         }else{
@@ -86,14 +84,74 @@ e.preventDefault();
             var dym_text = document.getElementById('player-dym').innerHTML = dymm[0];
           }else{
             var dym_text = document.getElementById('player-dym').innerHTML = dymm[0] + " or " + dymm[1];
+
+
+
+  
+            let dymBTN = document.getElementById('player-dym');
+            dymBTN.addEventListener('click', () => {
+              
+      
+      
+              showData();
+             
+           let data = snapshot.val()[dymm[0]];
+          let username = data.name;
+              console.log(username)
+              var player_name = document.getElementById('player-name').innerHTML = "We found this for " + username + " !";
+              var dym_text = document.getElementById('dym').innerHTML = '';
+              var dym_text = document.getElementById('player-dym').innerHTML = '';
+              
+                $('html, body').animate({
+                  scrollTop: $(".fa-desktop").offset().top +510
+                }, 2000);
+             document.getElementById('player-header-info').innerHTML = username + " Peripherals"
+             document.getElementById('player-basic-info').innerHTML = data.info
+              document.getElementById('monitor-info').innerHTML = data.monitor;
+              document.getElementById('player-ping').innerHTML = data.ping;
+              document.getElementById('player-mouse').innerHTML = data.mouse + "  Sens: " + data.sens;
+              document.getElementById('player-keyboard').innerHTML = data.keyboard;
+              document.getElementById('player-headset').innerHTML = data.headset;
+              if(data.controller === ''){
+                document.getElementById('player-controller').innerHTML = 'none';
+              }else{
+                document.getElementById('player-controller').innerHTML = data.controller;
+              }
+              // platform info
+              document.getElementById('player-platform-info').innerHTML = username + " Platform"
+              document.getElementById('player-basic').innerHTML =username + " Platform Info"
+              document.getElementById('player-ram').innerHTML = data.ram;
+              document.getElementById('player-motherboard').innerHTML = data.mobo;
+              document.getElementById('player-cpu').innerHTML = data.cpu;
+              document.getElementById('player-gpu').innerHTML = data.gpu;
+      
+              // player team info
+              document.getElementById('player-team-info').innerHTML = username + " Team"
+              document.getElementById('team-basic').innerHTML = username + " Team Status and Contract Status"
+              if(data.signed === 'none' || 'None' || ""){
+                document.getElementById('player-team-status').innerHTML = 'Player Not Currently Signed';
+                document.getElementById('player-team').innerHTML = 'Free Agent';
+              }else{
+                document.getElementById('player-team-status').innerHTML = 'Player Currently Signed';
+                document.getElementById('player-team').innerHTML = data.signed;
+              }
+      
+      
+      
+              
+            })
+          // ends above
+
+
+
+
           }
           
           });
           
         
       }
-      
-  
+    
   
   });
 
@@ -125,6 +183,7 @@ function erroData(){
     }, 5000);
   });
 }
+
 
 
 let redirect = () => {
