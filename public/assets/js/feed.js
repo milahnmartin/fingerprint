@@ -59,7 +59,7 @@ const printFeed = () => {
 
 
 rootRef.on('value',data => {
-  $("feed-ui").empty();
+  $("#feed-ui").empty();
     data.forEach((element) => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
