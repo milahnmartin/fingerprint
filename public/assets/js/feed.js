@@ -41,6 +41,8 @@ firebase.auth().onAuthStateChanged((user) => {
 
 // });
 
+const printFeed = () => {
+
 
 
 rootRef.on('value',data => {
@@ -48,7 +50,6 @@ rootRef.on('value',data => {
     data.forEach((element) => {
         let feed_user = element.val().username;
         let feed_message = element.val().user_message;
-
 
         $('#fingerprint-social-feed').append(
 `<div class="card text-center">
@@ -72,7 +73,15 @@ rootRef.on('value',data => {
 })
 
 
+}
 
 
+printFeed();
 
 
+async function doIt(){
+  return 'Hi'
+};
+console.log(doIt().then((e)=>{
+  console.log(e)
+}))

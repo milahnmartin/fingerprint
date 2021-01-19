@@ -26,13 +26,13 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/temp.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-<!--
 
-Host Cloud Template
 
-https://templatemo.com/tm-541-host-cloud
+    <!-- SEMANTIC UI CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <!-- END SEMANTIC -->
 
--->
   </head>
 
   <body>
@@ -96,10 +96,15 @@ https://templatemo.com/tm-541-host-cloud
             <div id="search-section">
               <form id="suggestion_form" name="gs" method="get" action="#">
               <div class="searchText">
-                <input type="text" name="q" id="user-q" style="position: relative;top: 30px;width: 300px;height: 35px;color: black;" class="searchText" placeholder="Search" autocomplete="on" onkeyup="changeToUpperCase(this)">
+                <!-- <input type="text" name="q" id="user-q" style="position: relative;top: 30px;width: 300px;height: 35px;color: black;" class="searchText" placeholder="Search" autocomplete="on" onkeyup="changeToUpperCase(this)"> -->
+                <div class="ui left icon input">
+                  <input type="text" name="q" id="user-q" class="searchText" placeholder="Search users..." onkeyup="changeToUpperCase(this)">
+                  <i class="users icon"></i>
+                </div>
+                <!-- END -->
               </div>
                   <!-- <input type="submit" name="results" class="main-button" value="Search Nowww"> -->
-                  <button type="submit" id="search-q" class="main-button search-btn btn btn-primary btn-lg" style="font-size:19px; position: relative;top: 70px;left: 7px;">SEARCH</button>
+                  <button type="submit" id="search-q" class="main-button search-btn btn btn-primary btn-lg" style="font-size:19px; position: relative;top: 40px;left: 7px;">SEARCH</button>
                </form>
               <div class="advSearch_chkbox">
               </div>
