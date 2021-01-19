@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="assets/css/temp.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
+
+      <!-- SEMANTIC UI CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+      <!-- END SEMANTIC -->
   </head>
 
   <body>
@@ -95,21 +100,17 @@
 
 
     <!-- TABLE -->
-    <table class="table" >
-      <thead class="thead-dark">
-        <tr >
-          <th scope="col" >Player:</th>
-          <th scope="col">Gamertag</th>
-          <th scope="col">Ping</th>
-          <th scope="col">Signed</th>
-          <!-- <th scope="col">Social</th> -->
+    <table class="ui selectable celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Ping</th>
+          <th>Signed</th>
         </tr>
       </thead>
       <tbody id="sheet">
        
-
-     
-
+    
       </tbody>
     </table>
 

@@ -4,10 +4,10 @@ const rootRef = database.ref('users/FN');
 
 
 
-let i = 0
+
 rootRef.on('value', data => {
     data.forEach(element =>  {
-        i +=1
+  
         let user = element.key;
         let player_signed = element.val().signed;
         let main_social = element.val().main_social;
@@ -25,16 +25,29 @@ rootRef.on('value', data => {
         }else{
             player_team_status = 'S';
         }
-    $('#sheet').append(
-    ` 
-    <tr>
-    <th scope="row">${i}</th>
-    <td>${user}</td>
-    <td>${new_ping}</td>
-    <td>${player_team_status}</td>
-  </tr>
-  `
-    );
+
+        if(player_team_status === 'S'){
+            $('#sheet').append(
+                
+               `<tr class="positive">
+        <td>${user}</td>
+         <td>${new_ping}</td>
+        <td>${player_team_status}</td>
+        </tr>
+        `
+                );
+        }else{
+            $('#sheet').append(
+                
+                `<tr class="negative">
+                <td>${user}</td>
+                <td>${new_ping}</td>
+               <td>${player_team_status}</td>
+         </tr>
+         `
+                 );
+        }
+    
     });
 })
 
