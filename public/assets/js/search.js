@@ -27,6 +27,7 @@ srchBTN.addEventListener('click', (e) => {
       if(typeof(snapshot.val()[input]) === 'object'){
         showData();
         const data = snapshot.val()[input];
+      
         
         var player_name = document.getElementById('player-name').innerHTML = "We found this for " + input + " !";
         var dym_text = document.getElementById('dym').innerHTML = '';
@@ -189,3 +190,4 @@ function erroData(){
 let redirect = () => {
   window.location.assign('./fortnite-players');
 }
+
