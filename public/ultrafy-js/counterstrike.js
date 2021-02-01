@@ -1,3 +1,5 @@
+
+
 const database = firebase.database();
 const rootref = database.ref('/users/CS');
 let myurl = new URL(window.location.href);

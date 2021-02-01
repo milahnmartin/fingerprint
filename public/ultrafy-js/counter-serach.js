@@ -1,6 +1,5 @@
 
-const database = firebase.database();
-const rootref = database.ref('/users/CS');
+
 const searchLogo = document.getElementById('search-logo');
 
 
@@ -9,22 +8,43 @@ searchLogo.addEventListener('click', e => {
     let searchInput = document.getElementById('search-input').value;
     searchInput = searchInput.toUpperCase();
     console.log(searchInput);
+   
+
+   checkFirebase(searchInput);
+  
+    })
+
+
+const checkFirebase = (input) => {
+    const database = firebase.database();
+    const rootref = database.ref('/users/CS');
+    let ResponseObject = new Object;
+    
+
     rootref.on('value', snap => {
+
         let response = snap.val();
-        let player_response = new Object();
-        player_response = (response[searchInput]);
+        let user_snap = response[input];
 
-
-        if(player_response === undefined){
-            console.log('NOT FOUND');
-            $('#search-input').val(' ');
-            document.getElementById('player-name-header').innerHTML = `Player Wasn't Found, Try Searching For A Different Player !`;
-            document.getElementById("search-input").focus();
+        if(user_snap === undefined){
+            console.log('No User Found')
+            
         }else{
-            let newsearch = searchInput.toLowerCase();
-            window.location.assign('./counterstrike' + '?pro=' + newsearch);
+            ResponseObject = user_snap;
+            
+            window.location.assign('./counterstrike' + '?pro=' + input.toLowerCase());
+
+           
+
+           
         }
 
-
     })
-})
+
+
+
+   
+
+   
+
+}
