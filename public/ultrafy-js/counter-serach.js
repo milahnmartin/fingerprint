@@ -29,6 +29,7 @@ const checkFirebase = (input) => {
         if(user_snap === undefined){
             console.log('No User Found')
             $('#search-input').val("");
+            $('#player-name-header').html('No User Was Found !')
             
         }else{
             window.location.assign('./counterstrike' + '?pro=' + input.toLowerCase());
