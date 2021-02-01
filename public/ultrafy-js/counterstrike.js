@@ -13,6 +13,7 @@ rootref.on('value', info => {
         console.log('user doesnt exist');
         let playerName = document.getElementById('player-name-header').innerHTML = 'Player was not Found, here is a list of Players :';
         showPlayers();
+        console.log('TRIGGERED')
 
 
     }
@@ -31,33 +32,29 @@ const showPlayers = () => {
         let user_keys = Object.keys(users);
         console.log(user_keys);
 
-       
+        user_keys.forEach(value => {
+            let user = value;
+            let team = users[value].signed;
+            let age = users[value].cpu;
+            let res = users[value].res;
+            let sens = users[value].sens;
+            $('#table-user-feed').append(
+                `
 
-        user_keys.forEach(players => {
-            let username = players;
-            let team = users[players].signed;
-            let player_info = users[players].info;
-            let player_age = users[players].cpu;
-           $('#user-feed').append(
+                <tr>
+              <td>${team}</td>
+              <td>${user} </td>
+              <td>${age}</td>
+              <td>${res}</td>
+              <td>${sens}</td>
+            </tr>
 
-               `
-        
-        <thead>
-        <tr><th>Name</th>
-        <th>Team</th>
-        <th>Age</th>
-        </tr></thead>
-        <tbody id="feed-table">
-        <tr>
-        <td data-label="Name">${username}</td>
-        <td data-label="Team">${team}</td>
-        <td data-label="Age">${player_age}</td>
-        </tr>
-        </tbody>
-        </table>
 
-               `
-           )
+                `
+            )
+
         })
+
+     
     })
 }
