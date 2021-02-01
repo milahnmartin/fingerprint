@@ -1,7 +1,7 @@
 const database = firebase.database();
 const rootref = database.ref('/users/CS');
 let myurl = new URL(window.location.href);
-let myplayer = myurl.searchParams.get('player');
+let myplayer = myurl.searchParams.get('pro');
 myplayer = myplayer.toUpperCase();
 console.log(myplayer);
 rootref.on('value', info => {
@@ -13,7 +13,7 @@ rootref.on('value', info => {
         console.log('user doesnt exist');
         let playerName = document.getElementById('player-name-header').innerHTML = 'Player was not Found, here is a list of Players :';
         showPlayers();
-        console.log('TRIGGERED')
+        
 
 
     }
@@ -41,15 +41,7 @@ const showPlayers = () => {
             $('#table-user-feed').append(
                 `
 
-                <tr>
-              <td>${team}</td>
-              <td>${user} </td>
-              <td>${age}</td>
-              <td>${res}</td>
-              <td>${sens}</td>
-            </tr>
-
-
+            
                 `
             )
 
