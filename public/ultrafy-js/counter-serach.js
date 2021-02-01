@@ -28,6 +28,7 @@ const checkFirebase = (input) => {
 
         if(user_snap === undefined){
             console.log('No User Found')
+            $('#search-input').val("");
             
         }else{
             ResponseObject = user_snap;
