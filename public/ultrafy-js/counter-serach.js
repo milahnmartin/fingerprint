@@ -7,7 +7,7 @@ searchLogo.addEventListener('click', e => {
     e.preventDefault();
     let searchInput = document.getElementById('search-input').value;
     searchInput = searchInput.toUpperCase();
-    console.log(searchInput);
+    
    
 
    checkFirebase(searchInput);
@@ -18,7 +18,7 @@ searchLogo.addEventListener('click', e => {
 const checkFirebase = (input) => {
     const database = firebase.database();
     const rootref = database.ref('/users/CS');
-    let ResponseObject = new Object;
+     ResponseObject = new Object;
     
 
     rootref.on('value', snap => {
@@ -31,13 +31,7 @@ const checkFirebase = (input) => {
             $('#search-input').val("");
             
         }else{
-            ResponseObject = user_snap;
-            
             window.location.assign('./counterstrike' + '?pro=' + input.toLowerCase());
-
-           
-
-           
         }
 
     })
