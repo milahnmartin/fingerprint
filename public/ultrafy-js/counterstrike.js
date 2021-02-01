@@ -1,3 +1,5 @@
+
+
 const database = firebase.database();
 const rootref = database.ref('/users/CS');
 let myurl = new URL(window.location.href);
@@ -10,7 +12,7 @@ rootref.on('value', info => {
     let detailedplayer = new Object();
     detailedplayer = mydata[myplayer];
     if (detailedplayer == undefined) {
-        console.log('user doesnt exist');
+      
         let playerName = document.getElementById('player-name-header').innerHTML = 'Player was not Found, here is a list of Players :';
         showPlayers();
         
@@ -30,7 +32,7 @@ const showPlayers = () => {
         users = info.val()
 
         let user_keys = Object.keys(users);
-        console.log(user_keys);
+       
 
         user_keys.forEach(value => {
             let user = value;
