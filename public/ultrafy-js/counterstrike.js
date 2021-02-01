@@ -11,7 +11,7 @@ rootref.on('value', info => {
     detailedplayer = mydata[myplayer];
     if (detailedplayer == undefined) {
         console.log('user doesnt exist');
-        let playerName = document.getElementById('player-name-header').innerHTML = 'Player Not Found, List of Availible Players:';
+        let playerName = document.getElementById('player-name-header').innerHTML = 'Player you are looking for does not Exist !';
         showPlayers();
 
     }
@@ -40,8 +40,7 @@ const showPlayers = () => {
            $('.new-feed').append(
 
                `
-                
-             
+         
 
                `
            )
