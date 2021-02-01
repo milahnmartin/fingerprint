@@ -12,14 +12,6 @@ rootref.on('value', info => {
     if (detailedplayer == undefined) {
         console.log('user doesnt exist');
         let playerName = document.getElementById('player-name-header').innerHTML = 'Player was not Found, here is a list of Players :';
-        $('#table-user-feedd').append(
-            `
-            <table class="ui celled table" id="user-feed">
-
-            </table>
-            
-            `
-        )
         showPlayers();
 
 
