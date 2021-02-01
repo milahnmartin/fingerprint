@@ -11,8 +11,17 @@ rootref.on('value', info => {
     detailedplayer = mydata[myplayer];
     if (detailedplayer == undefined) {
         console.log('user doesnt exist');
-        let playerName = document.getElementById('player-name-header').innerHTML = 'Player you are looking for does not Exist !';
+        let playerName = document.getElementById('player-name-header').innerHTML = 'Player was not Found, here is a list of Players :';
+        $('#table-user-feedd').append(
+            `
+            <table class="ui celled table" id="user-feed">
+
+            </table>
+            
+            `
+        )
         showPlayers();
+
 
     }
     else {
@@ -37,10 +46,23 @@ const showPlayers = () => {
             let team = users[players].signed;
             let player_info = users[players].info;
             let player_age = users[players].cpu;
-           $('.new-feed').append(
+           $('#user-feed').append(
 
                `
-         
+        
+        <thead>
+        <tr><th>Name</th>
+        <th>Team</th>
+        <th>Age</th>
+        </tr></thead>
+        <tbody id="feed-table">
+        <tr>
+        <td data-label="Name">${username}</td>
+        <td data-label="Team">${team}</td>
+        <td data-label="Age">${player_age}</td>
+        </tr>
+        </tbody>
+        </table>
 
                `
            )
