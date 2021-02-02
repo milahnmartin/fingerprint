@@ -1,7 +1,7 @@
 
 
 const database = firebase.database();
-const rootref = database.ref('/users/CS');
+const rootref = database.ref('counterstrike/pro');
 let myurl = new URL(window.location.href);
 let myplayer = myurl.searchParams.get('pro');
 myplayer = myplayer.toUpperCase();
