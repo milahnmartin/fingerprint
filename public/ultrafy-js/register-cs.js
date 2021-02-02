@@ -45,4 +45,11 @@ submitReg.addEventListener('click' , e => {
         team: current_team
     })
 
+
+    document.getElementById('submit-register').innerHTML = 'Thank You ' + fullname + ' !';
+    setTimeout(function(){
+        window.location.assign('./index');
+     }, 2000);
+   
+
 });
