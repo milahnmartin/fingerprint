@@ -25,9 +25,9 @@ submitReg.addEventListener('click' , e => {
 
 
 
-    rootRef.child(gamertag).update({
+    rootRef.child(gamertag.toUpperCase()).update({
         fullname: fullname,
-        gamertag: gamertag,
+        gamertag: gamertag.toUpperCase(),
         age: age,
         resolution: resolution,
         sensitivity: sensitivity,
