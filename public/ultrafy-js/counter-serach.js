@@ -17,7 +17,7 @@ searchLogo.addEventListener('click', e => {
 
 const checkFirebase = (input) => {
     const database = firebase.database();
-    const rootref = database.ref('/users/CS');
+    const rootref = database.ref('/counterstrike/pro');
      ResponseObject = new Object;
     
 
