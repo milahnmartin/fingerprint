@@ -1,12 +1,12 @@
-.table-player-information h1{
-    display: flex;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    position: relative;
-    top: 6px;
-    color: #000000;
-    font-weight: lighter;
-    letter-spacing: 6px;
-    
+.table-player-information h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 6px;
+  color: #000000;
+  font-weight: bolder;
+  letter-spacing: 6px;
+  padding: 5px 5px;
 }

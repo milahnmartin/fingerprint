@@ -21,6 +21,11 @@ rootref.on('value', info => {
     else {
         let playerName = document.getElementById('player-name-header').innerHTML = myplayer;
         InfoTable(myplayer);
+        mouseTable(myplayer);
+        monitorTable(myplayer);
+        gearTable(myplayer);
+        crosshairTable(myplayer);
+    
     }
 });
 
@@ -47,3 +52,100 @@ const InfoTable = (player) => {
     })
 }
 
+
+const mouseTable = (player) => {
+
+    rootref.on('value', data => {
+        let response = data.val();
+        let player_data = response[player];
+        console.log(player_data)
+        let dpi = player_data['dpi'];
+        let sens = player_data['sensitivity'];
+        let raw_input = player_data['raw_input'];
+        let zoom_sens = player_data['zoom_sens']
+
+
+        $('#player-mouse-table').append(
+            `
+            <tr>
+            <td>${dpi}</td>
+            <td>${sens}</td>
+            <td>${raw_input}</td>
+            <td>${zoom_sens}</td>
+            </tr>
+            `
+        )
+    })
+}
+
+
+const monitorTable = (player) => {
+
+    rootref.on('value', data => {
+        let response = data.val();
+        let player_data = response[player];
+        console.log(player_data)
+        let res = player_data['resolution'];
+        let aspect_ratio = player_data['aspect_ratio'];
+        let scaling = player_data['scaling_mode'];
+        let hz = player_data['monitor_hz']
+
+
+        $('#player-monitor-table').append(
+            `
+            <tr>
+            <td>${res}</td>
+            <td>${aspect_ratio}</td>
+            <td>${scaling}</td>
+            <td>${hz}</td>
+            </tr>
+
+            `
+        )
+    })
+}
+
+const gearTable = (player) => {
+
+    rootref.on('value', data => {
+        let response = data.val();
+        let player_data = response[player];
+        console.log(player_data)
+        let monitor = player_data['monitor'];
+        let mouse = player_data['mouse'];
+        let keyboard = player_data['keyboard'];
+        let headset = player_data['headset']
+
+
+        $('#player-gear-table').append(
+            `
+            <tr>
+            <td>${monitor}</td>
+            <td>${mouse}</td>
+            <td>${keyboard}</td>
+            <td>${headset}</td>
+            </tr>
+
+            `
+        )
+    })
+}
+
+
+const crosshairTable = (player) => {
+    rootref.on('value', data => {
+        let response = data.val();
+        let player_data = response[player];
+        console.log(player_data)
+        let crosshair = player_data['crosshair_code'];
+      
+
+
+        $('#player-crosshair-table').append(
+            `
+            ${crosshair}
+
+            `
+        )
+    })   
+}
