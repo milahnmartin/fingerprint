@@ -22,6 +22,8 @@ submitReg.addEventListener('click' , e => {
     let keyboard = document.getElementById('input-15').value;
     let headset = document.getElementById('input-16').value;
     let current_team = document.getElementById('input-17').value;
+    let faceit = document.getElementById('input-18').value;
+    let esea = document.getElementById('input-19').value;
 
 
 
@@ -42,7 +44,9 @@ submitReg.addEventListener('click' , e => {
         mouse: mouse,
         keyboard: keyboard,
         headset: headset,
-        team: current_team
+        team: current_team,
+        faceit: faceit,
+        esea: esea
     })
 
 
