@@ -136,7 +136,6 @@ const crosshairTable = (player) => {
     rootref.on('value', data => {
         let response = data.val();
         let player_data = response[player];
-        console.log(player_data)
         let crosshair = player_data['crosshair_code'];
       
 
