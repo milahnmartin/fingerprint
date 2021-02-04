@@ -1,4 +1,4 @@
-
+let theSuggestedname = new String();
 
 const searchLogo = document.getElementById('search-logo');
 
@@ -8,6 +8,7 @@ searchLogo.addEventListener('click', e => {
     let searchInput = document.getElementById('search-input').value;
     searchInput = searchInput.toUpperCase();
     
+   
    
 
    checkFirebase(searchInput);
@@ -63,8 +64,16 @@ const getSuggestion = (player) => {
         my_suggestion_1 = my_suggestion_array[0];
         my_suggestion_2 = my_suggestion_array[1];
         
-
+        theSuggestedname = my_suggestion_1.toLowerCase();
     })  
 
    return my_suggestion_1 + " " + my_suggestion_2
 }
+
+
+let suggestion_click = document.getElementById('cs-suggestion');
+
+suggestion_click.addEventListener('click', () => {
+
+    window.open(window.location.host+"/counterstrike?pro="+theSuggestedname);
+})

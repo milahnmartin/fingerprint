@@ -34,7 +34,6 @@ const InfoTable = (player) => {
     rootref.on('value', data => {
         let response = data.val();
         let player_data = response[player];
-        console.log(player_data)
         let age = player_data['age'];
         let fullname = player_data['fullname'];
         let team = player_data['team'];
@@ -58,7 +57,6 @@ const mouseTable = (player) => {
     rootref.on('value', data => {
         let response = data.val();
         let player_data = response[player];
-        console.log(player_data)
         let dpi = player_data['dpi'];
         let sens = player_data['sensitivity'];
         let raw_input = player_data['raw_input'];
@@ -84,7 +82,6 @@ const monitorTable = (player) => {
     rootref.on('value', data => {
         let response = data.val();
         let player_data = response[player];
-        console.log(player_data)
         let res = player_data['resolution'];
         let aspect_ratio = player_data['aspect_ratio'];
         let scaling = player_data['scaling_mode'];
