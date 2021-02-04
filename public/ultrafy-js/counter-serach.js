@@ -75,5 +75,5 @@ let suggestion_click = document.getElementById('cs-suggestion');
 
 suggestion_click.addEventListener('click', () => {
 
-    window.open(window.location.host+"/counterstrike?pro="+theSuggestedname);
+    window.location.assign("/counterstrike?pro="+theSuggestedname);
 })
