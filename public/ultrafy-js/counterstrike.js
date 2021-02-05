@@ -107,7 +107,6 @@ const gearTable = (player) => {
     rootref.on('value', data => {
         let response = data.val();
         let player_data = response[player];
-        console.log(player_data)
         let monitor = player_data['monitor'];
         let mouse = player_data['mouse'];
         let keyboard = player_data['keyboard'];
@@ -145,3 +144,6 @@ const crosshairTable = (player) => {
         )
     })   
 }
+
+
+
