@@ -25,6 +25,7 @@ rootref.on('value', info => {
         monitorTable(myplayer);
         gearTable(myplayer);
         crosshairTable(myplayer);
+        profileTable(myplayer);
     
     }
 });
@@ -145,5 +146,21 @@ const crosshairTable = (player) => {
     })   
 }
 
+const profileTable = (player) => {
+    rootref.on('value', links => {
+        let esea = links.val()[player]['esea'];
+        let faceit = links.val()[player]['faceit'];
 
+        $('#player-link-table').append(
+            `
+            <tr>
+            <td>${faceit}</td>
+            <td>${esea}</td>
+            </tr>
+
+            `
+        )
+
+    })
+}
 
