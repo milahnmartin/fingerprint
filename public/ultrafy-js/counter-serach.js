@@ -31,7 +31,8 @@ const checkFirebase = (input) => {
             console.log('No User Found')
             $('#search-input').val("");
             $('#player-name-header').html('No User Was Found !')
-            $('#cs-suggestion').html('Did you mean ' +  getSuggestion(input));
+            $('#cs-suggestion').html('Did you mean ');
+            $('#actual-suggestion').html(getSuggestion(input).toLowerCase());
            
             
         }else{
@@ -56,22 +57,22 @@ const getSuggestion = (player) => {
     let suggested_player = new String();
     suggested_player = player.substring(0,suggested_player_size);
 
-    rootref.orderByChild('gamertag').startAt(suggested_player).limitToFirst(2).on('value', data => {
+    rootref.orderByChild('gamertag').startAt(suggested_player).limitToFirst(1).on('value', data => {
         let my_suggestions_object = data.val();
 
         let my_suggestion_array = Object.keys(my_suggestions_object);
 
         my_suggestion_1 = my_suggestion_array[0];
-        my_suggestion_2 = my_suggestion_array[1];
+      
         
         theSuggestedname = my_suggestion_1.toLowerCase();
     })  
 
-   return my_suggestion_1 + " " + my_suggestion_2
+   return my_suggestion_1 
 }
 
 
-let suggestion_click = document.getElementById('cs-suggestion');
+let suggestion_click = document.getElementById('actual-suggestion');
 
 suggestion_click.addEventListener('click', () => {
 
