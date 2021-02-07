@@ -1,4 +1,4 @@
-let theSuggestedname = new String();
+let theSuggestedname = String();
 
 const searchLogo = document.getElementById('search-logo');
 
@@ -19,7 +19,7 @@ searchLogo.addEventListener('click', e => {
 const checkFirebase = (input) => {
     const database = firebase.database();
     const rootref = database.ref('/counterstrike/pro');
-     ResponseObject = new Object;
+     ResponseObject = {};
     
 
     rootref.on('value', snap => {
@@ -51,10 +51,10 @@ const checkFirebase = (input) => {
 
 
 const getSuggestion = (player) => {
-    let suggested_player_size = new Number();
+    let suggested_player_size;
     suggested_player_size = player.length;
     suggested_player_size = suggested_player_size / 2;
-    let suggested_player = new String();
+    let suggested_player;
     suggested_player = player.substring(0,suggested_player_size);
 
     rootref.orderByChild('gamertag').startAt(suggested_player).limitToFirst(1).on('value', data => {
