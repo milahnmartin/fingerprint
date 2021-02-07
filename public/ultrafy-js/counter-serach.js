@@ -1,4 +1,4 @@
-let theSuggestedname = String();
+let theSuggestedname = "";
 
 const searchLogo = document.getElementById('search-logo');
 
