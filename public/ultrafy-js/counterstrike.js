@@ -6,9 +6,9 @@ let myurl = new URL(window.location.href);
 let myplayer = myurl.searchParams.get('pro');
 myplayer = myplayer.toUpperCase();
 rootref.on('value', info => {
-    let mydata = new Object();
+    let mydata = {};
     mydata = info.val();
-    let detailedplayer = new Object();
+    let detailedplayer = {};
     detailedplayer = mydata[myplayer];
     if (detailedplayer == undefined) {
       
