@@ -33,6 +33,7 @@ const checkFirebase = (input) => {
             $('#player-name-header').html('No User Was Found !')
             $('#cs-suggestion').html('Did you mean ');
             $('#actual-suggestion').html(getSuggestion(input).toLowerCase());
+
            
             
         }else{
@@ -62,7 +63,7 @@ const getSuggestion = (player) => {
 
         let my_suggestion_array = Object.keys(my_suggestions_object);
 
-        let my_suggestion_1 = my_suggestion_array[0];
+        my_suggestion_1 = my_suggestion_array[0];
       
         
         theSuggestedname = my_suggestion_1.toLowerCase();
