@@ -19,7 +19,7 @@ searchLogo.addEventListener('click', e => {
 const checkFirebase = (input) => {
     const database = firebase.database();
     const rootref = database.ref('/counterstrike/pro');
-     ResponseObject = {};
+    let ResponseObject = {};
     
 
     rootref.on('value', snap => {
@@ -62,7 +62,7 @@ const getSuggestion = (player) => {
 
         let my_suggestion_array = Object.keys(my_suggestions_object);
 
-        my_suggestion_1 = my_suggestion_array[0];
+        let my_suggestion_1 = my_suggestion_array[0];
       
         
         theSuggestedname = my_suggestion_1.toLowerCase();
