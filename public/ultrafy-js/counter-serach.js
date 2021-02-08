@@ -19,7 +19,7 @@ searchLogo.addEventListener('click', e => {
 const checkFirebase = (input) => {
     const database = firebase.database();
     const rootref = database.ref('/counterstrike/pro');
-     ResponseObject = {};
+    let ResponseObject = {};
     
 
     rootref.on('value', snap => {
@@ -33,6 +33,7 @@ const checkFirebase = (input) => {
             $('#player-name-header').html('No User Was Found !')
             $('#cs-suggestion').html('Did you mean ');
             $('#actual-suggestion').html(getSuggestion(input).toLowerCase());
+
            
             
         }else{
