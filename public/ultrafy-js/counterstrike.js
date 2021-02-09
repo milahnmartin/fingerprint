@@ -20,6 +20,7 @@ rootref.on('value', info => {
     }
     else {
         let playerName = document.getElementById('player-name-header').innerHTML = myplayer;
+        document.title = 'FINGERPRINT - ' + myplayer.toLocaleUpperCase();
         InfoTable(myplayer);
         mouseTable(myplayer);
         monitorTable(myplayer);
