@@ -79,3 +79,11 @@ suggestion_click.addEventListener('click', () => {
 
     window.location.assign("/counterstrike?player="+theSuggestedname);
 })
+
+
+
+$("#search-input").keyup(function(event) {
+    if (event.which === 13) {
+      $("#search-logo").click();
+    }
+  });
