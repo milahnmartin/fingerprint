@@ -3,7 +3,7 @@
 const database = firebase.database();
 const rootref = database.ref('counterstrike/pro');
 let myurl = new URL(window.location.href);
-let myplayer = myurl.searchParams.get('pro');
+let myplayer = myurl.searchParams.get('player');
 myplayer = myplayer.toUpperCase();
 rootref.on('value', info => {
     let mydata = {};
