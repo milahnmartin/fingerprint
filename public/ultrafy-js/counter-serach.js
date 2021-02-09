@@ -37,7 +37,7 @@ const checkFirebase = (input) => {
            
             
         }else{
-            window.location.assign('./counterstrike' + '?pro=' + input.toLowerCase());
+            window.location.assign('./counterstrike' + '?player=' + input.toLowerCase());
         }
 
     })
@@ -77,5 +77,5 @@ let suggestion_click = document.getElementById('actual-suggestion');
 
 suggestion_click.addEventListener('click', () => {
 
-    window.location.assign("/counterstrike?pro="+theSuggestedname);
+    window.location.assign("/counterstrike?player="+theSuggestedname);
 })
