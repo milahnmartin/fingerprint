@@ -25,7 +25,7 @@ e.preventDefault();
 // };
 
 let msg = {
-    "content": "__**UserName**__: " + name +  " __**Email**__: " + email + " __**Subject**__: " + subject + " __**Messgae**__: " + message
+    "content": "__**UserName**__: " + name +  "  __**Email**__: " + email + "  __**Subject**__: " + subject + "  __**Messgae**__: " + message
 }
 
 var discordting = {
