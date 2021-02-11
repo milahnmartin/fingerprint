@@ -21,10 +21,9 @@ submit_buttom.addEventListener('click', e => {
     let team1 = document.getElementById('team1').value;
     let team2 = document.getElementById('team2').value;
 
-    if(game_time || team1 || team2 == ""){
+    if(game_time == "" || team1 == "" || team2 == ""){
         alert('Required Fields Are Empty !')
         $('#submit-game').html('ERROR');
-        $('#submit-game').html('SUBMITTED !')
         setTimeout(function(){ $('#submit-game').html('Submit'); }, 3000);
     
     }else{
@@ -36,6 +35,8 @@ submit_buttom.addEventListener('click', e => {
             booked: "NOT BOOKED"
         });
     
+
+        $('#submit-game').html('SUBMITTED !')
     
   
     
@@ -46,3 +47,12 @@ submit_buttom.addEventListener('click', e => {
 
 });
 
+
+
+const games_button = document.getElementById('games-button');
+
+
+games_button.addEventListener('click', e => {
+    e.preventDefault();
+    window.location.assign('./games')
+})

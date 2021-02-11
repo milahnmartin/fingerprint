@@ -48,6 +48,7 @@ let mygames= value.val();
 let time = mygames.time;
 let team1 = mygames.team1.toUpperCase();
 let team2 = mygames.team2.toUpperCase();
+let booked = mygames.booked;
 
       $('#game-feed').append(
 
@@ -71,7 +72,7 @@ let team2 = mygames.team2.toUpperCase();
                   CLAIM
                   <i class="right chevron icon"></i>
                 </div>
-                <div class="ui label">NOT BOOKED</div>
+                <div class="ui label">${booked}</div>
               </div>
             </div>
           </div>
