@@ -1250,6 +1250,13 @@ footer .sub-footer a {
   #ping-column {
     width: 2px !important;
   }
+
+  .main-buttons button {
+    position: relative !important;
+    right: 7px !important;
+    width: 60px !important;
+    height: 38px !important;
+  }
 }
 
 .mouse {
