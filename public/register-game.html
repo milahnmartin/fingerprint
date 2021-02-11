@@ -8,7 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - CAST</title>
+    <title>ZA FINGERPRINT - REGISTER YOUR GAME</title>
     <link rel="icon" 
       type="image/png" 
      href="./assets/images/bluefinger.png">
@@ -73,7 +73,7 @@
           <div class="functional-buttons">
             <ul>
               <li><a target="__blank" id="reg-button" href="./index">HOME</a></li>
-              <li><a target="__blank" id="update-button" style="cursor: pointer;">LOGOUT</a></li>
+              <li><a target="__blank" id="update-button" style="cursor: pointer;">GAMES</a></li>
             </ul>
           </div>
         </div>
@@ -86,7 +86,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 id="player-name-header">Book Your Game !</h1>
+            <h1 id="player-name-header">Want Your CS Game Streamed ? <br> Register Your Game Here</h1>
             <p><a href="./index.html">Home</a> / <span>Cast Bookings</span></p>
 
 
@@ -102,12 +102,25 @@
 
     <!-- Contact Us Starts Here -->
 
-    <div class="ui divided items" id="game-feed">
-
-
-
-
-       
+    <div class="ui inverted segment" style="position: relative;top: 25px;">
+        <div class="ui inverted form">
+          <div class="two fields">
+            <div class="field">
+              <label>Team 1 Name</label>
+              <input placeholder="ATK" type="text" id="team1">
+            </div>
+            <div class="field">
+              <label>Team 2 Name</label>
+              <input placeholder="Goliath" type="text" id="team2">
+            </div>
+          </div>
+          <div class="field">
+            <label>Game Time</label>
+            <input placeholder="Friday 23 February 11:00AM SAST" type="text" id="game-time">
+          </div>
+        </div>
+          <div class="ui submit button" id="submit-game" style="position: relative;top: 8px;">Submit</div>
+        </div>
       </div>
 
     <!-- Contact Us Ends Here -->
@@ -284,7 +297,7 @@
   firebase.analytics();
 </script>
 
-<script src="./ultrafy-js/cast.js"></script>
+<script src="./ultrafy-js/register-game.js"></script>
 
 
   </body>
