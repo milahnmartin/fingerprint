@@ -8,6 +8,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       document.getElementById('player-name-header').innerHTML = 'Book Your Game ' + user.displayName;
+      document.title = user.displayName + " CAST | Fingerprint ZA"
       console.log(user.displayName)
     } else {
       // No user is signed in.
