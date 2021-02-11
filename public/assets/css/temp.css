@@ -1011,6 +1011,11 @@ footer .sub-footer a {
     top: -1px;
     height: 50px;
   }
+
+  #twitter-login {
+    position: relative !important;
+    top: -400px !important;
+  }
 }
 
 /* Responsive Style */
