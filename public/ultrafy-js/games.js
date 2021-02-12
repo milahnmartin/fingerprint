@@ -32,8 +32,8 @@ rootGames.on('value', games => {
                     <p></p>
                   </div>
                   <div class="extra">
-                    <div class="ui right floated primary button" id="${booked}" onclick="getlink(this.id)">
-                      VIEW LINK
+                    <div class="ui right floated primary button" id="${team1.toLowerCase()+"vs"+team2.toLowerCase()}" onclick="getlink(this.id)">
+                      VIEW STREAM
                       <i class="right chevron icon"></i>
                     </div>
                     <div class="ui label">Claimed By ${claimed}</div>
@@ -55,6 +55,17 @@ rootGames.on('value', games => {
 
 
 const getlink = (id) => {
-    window.open();
+
+  rootGames.on('value',data => {
+    data = data.val()[id];
+    let link = data.stream;
+
+    window.open(link)
+
+  })
+
+
+
+   
 
 }
