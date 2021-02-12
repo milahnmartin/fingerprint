@@ -9,11 +9,11 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       document.getElementById('player-name-header').innerHTML = 'Book Your Game ' + user.displayName;
       document.title = user.displayName + " CAST | Fingerprint ZA"
-      console.log(user)
+
       displayGames();
     } else {
       // No user is signed in.
-        window.location.assign('./cast-login');
+        window.location.assign('./login');
     }
   });
 
