@@ -10,7 +10,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       document.getElementById('player-name-header').innerHTML = 'Book Your Game ' + user.displayName;
       document.title = user.displayName + " CAST | Fingerprint ZA"
 
-      displayGames();
+      
     } else {
       // No user is signed in.
         window.location.assign('./cast-login');
@@ -127,3 +127,10 @@ const claimed = (id) => {
 
 
 }
+
+
+
+
+
+
+displayGames();

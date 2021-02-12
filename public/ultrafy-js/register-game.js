@@ -41,11 +41,33 @@ submit_buttom.addEventListener('click', e => {
         $('#submit-game').html('SUBMITTED !')
         setTimeout(function(){ $('#submit-game').html('Submit'); }, 3000);
         $('#player-name-header').html(team1 + " vs " + team2 + " Has been Registered ! <br> Visit Games to see who claimed your Game !" )
+
+
+
+
+
+        const game_channel = "https://discord.com/api/webhooks/809930610214043648/81QKwx7Kes6UWYegu2M4t9gitwohpqLo2J5xsRxObhGflXW0_tT0-IHSpv4spFtO84aE";
+
+
+        let msg = {
+            "content": "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time
+        }
+    
+    
+        
+    fetch(game_channel, {"method":"POST","headers":{"content-type":"application/json"},
+    "body": JSON.stringify(msg)});
+    
+        
     
   
        
     
     }
+
+
+
+
 
 
 
