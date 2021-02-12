@@ -39,6 +39,7 @@ logout_btn.addEventListener('click', e => {
 
 const displayGames = () => {
 
+
   rootClaim.on('value', games => {
     $('#game-feed').empty();
     games.forEach(value => {
@@ -89,6 +90,9 @@ let booked = mygames.booked;
 
 
 const claimed = (id) => {
+  console.log(id)
+
+
   rootClaim.on('value', data => {
     let mygame = data.val();
     mygame = mygame[id];
