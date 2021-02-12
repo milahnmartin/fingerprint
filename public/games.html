@@ -8,7 +8,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>ZA FINGERPRINT - REGISTER YOUR GAME</title>
+    <title>ZA FINGERPRINT - GAMES</title>
     <link rel="icon" 
       type="image/png" 
      href="../assets/images/bluefinger.png">
@@ -17,9 +17,9 @@
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/temp.css">
-    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/temp.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
 
 
     <!-- SEMANTIC UI CDN -->
@@ -48,32 +48,32 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="../index"><h2><img src="../assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;"><em></em></h2></a>
+          <a class="navbar-brand" href="./index"><h2><img src="../assets/images/-fingerprint_90738.png" style="height: 45px; width: 45px;"><em></em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive" style="position: relative; left: -55px;">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="../index">Home
+                <a class="nav-link" href="./index">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="../about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Our Services</a>
+                <a class="nav-link" href="../services.html">Our Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="../contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
           <div class="functional-buttons">
             <ul>
-              <li><a target="__blank" id="reg-button" href="../index">HOME</a></li>
-              <li><a target="__blank" id="games-button" style="cursor: pointer;">GAMES</a></li>
+              <li><a target="__blank" id="reg-button" href="./register.html">REG GAME</a></li>
+              <li><a target="__blank" id="update-button" href="./book.html" style="cursor: pointer;">BOOK GAME</a></li>
             </ul>
           </div>
         </div>
@@ -86,8 +86,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1 id="player-name-header">Want Your CS Game Streamed ? <br> Register Your Game Here</h1>
-            <p><a href="../index.html">Home</a> / <span>Cast Bookings</span></p>
+            <h1 id="player-name-header">Upcoming Games and Streams !</h1>
+            <p><a href="../index.html">Home</a> / <span>Games</span></p>
 
 
 
@@ -102,25 +102,12 @@
 
     <!-- Contact Us Starts Here -->
 
-    <div class="ui inverted segment" style="position: relative;top: 25px;">
-        <div class="ui inverted form">
-          <div class="two fields">
-            <div class="field">
-              <label>Team 1 Name</label>
-              <input placeholder="ATK" type="text" id="team1">
-            </div>
-            <div class="field">
-              <label>Team 2 Name</label>
-              <input placeholder="Goliath" type="text" id="team2">
-            </div>
-          </div>
-          <div class="field">
-            <label>Game Time</label>
-            <input placeholder="Friday 23 February 11:00AM SAST" type="text" id="game-time">
-          </div>
-        </div>
-          <div class="ui submit button" id="submit-game" style="position: relative;top: 8px;">Submit</div>
-        </div>
+    <div class="ui divided items" id="game-feed">
+
+
+
+        
+       
       </div>
 
     <!-- Contact Us Ends Here -->
@@ -297,7 +284,7 @@
   firebase.analytics();
 </script>
 
-<script src="../ultrafy-js/register-game.js"></script>
+<script src="../ultrafy-js/games.js"></script>
 
 
   </body>
