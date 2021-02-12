@@ -20,6 +20,9 @@ submit_buttom.addEventListener('click', e => {
     let team1 = document.getElementById('team1').value;
     let team2 = document.getElementById('team2').value;
 
+    team1 = team1.toLowerCase();
+    team2 = team2.toLowerCase();
+
     if(game_time == "" || team1 == "" || team2 == ""){
         alert('Required Fields Are Empty !')
         $('#submit-game').html('ERROR');
