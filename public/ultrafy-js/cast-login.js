@@ -27,6 +27,7 @@ login_btn.addEventListener('click', e => {
       window.location.assign('./cast');
       // ...
     }).catch((error) => {
+      console.log('ERROR BITCH')
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;

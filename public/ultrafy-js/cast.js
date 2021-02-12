@@ -56,7 +56,7 @@ let booked = mygames.booked;
         
         <div class="item">
             <div class="image">
-              <img src="../assets/images/bluefinger.png" style="width: 100px; height: 100px;">
+              <img src="./assets/images/bluefinger.png" style="width: 100px; height: 100px;">
             </div>
             <div class="content">
               <a class="header">${team1}  vs  ${team2}</a>

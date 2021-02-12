@@ -26,5 +26,5 @@ cs_click.addEventListener('click',e => {
 
 cast_click.addEventListener('click', e => {
     e.preventDefault();
-    window.location.assign('./cast/book');
+    window.location.assign('./cast');
 })

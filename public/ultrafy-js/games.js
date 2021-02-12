@@ -60,7 +60,7 @@ const getlink = (id) => {
     data = data.val()[id];
     let link = data.stream;
 
-    window.open("https://"+link)
+    window.open(link)
 
   })
 
