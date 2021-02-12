@@ -1,6 +1,5 @@
 const database = firebase.database();
 const rootClaim = database.ref('cast/claim');
-const rootClaimed = database.ref('cast/claimed');
 const rootGames = database.ref('cast/games');
 
 
@@ -28,7 +27,7 @@ submit_buttom.addEventListener('click', e => {
     
     }else{
 
-        rootGames.child(team1+"vs"+team2).update({
+        rootClaim.child(team1+"vs"+team2).update({
             team1:team1,
             team2:team2,
             time:game_time,
