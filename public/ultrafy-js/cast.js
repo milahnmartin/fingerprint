@@ -1,6 +1,5 @@
 const database = firebase.database();
 const rootClaim = database.ref('cast/claim');
-const rootClaimed = database.ref('cast/claimed');
 const rootGames = database.ref('cast/games');
 
 
@@ -10,8 +9,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // User is signed in.
       document.getElementById('player-name-header').innerHTML = 'Book Your Game ' + user.displayName;
       document.title = user.displayName + " CAST | Fingerprint ZA"
-      console.log(user.displayName)
-
+      console.log(user)
       displayGames();
     } else {
       // No user is signed in.
@@ -41,7 +39,7 @@ logout_btn.addEventListener('click', e => {
 
 const displayGames = () => {
 
-  rootGames.on('value', games => {
+  rootClaim.on('value', games => {
     $('#game-feed').empty();
     games.forEach(value => {
 let mygames= value.val();
@@ -68,7 +66,7 @@ let booked = mygames.booked;
                 <p></p>
               </div>
               <div class="extra">
-                <div class="ui right floated primary button">
+                <div class="ui right floated primary button" id="${team1.toLowerCase()+"vs"+team2.toLowerCase()}" onclick="claimed(this.id)">
                   CLAIM
                   <i class="right chevron icon"></i>
                 </div>
@@ -86,5 +84,41 @@ let booked = mygames.booked;
     
 
   })
+
+}
+
+
+const claimed = (id) => {
+  rootClaim.on('value', data => {
+    let mygame = data.val();
+    mygame = mygame[id];
+   
+    let team1 = mygame.team1;
+    let team2 = mygame.team2;
+    let time = mygame.time;
+    let user = firebase.auth().currentUser;
+    let photourl = user.photoURL;
+
+
+
+
+    rootGames.child(id).update({
+      team1: team1,
+      team2: team2,
+      time: time,
+      claimed_by: user.displayName,
+      claimed_by_photo: photourl
+
+    });
+
+    
+  let rootDelete = database.ref('cast/claim/'+id);
+  rootDelete.remove();   
+
+
+  })
+
+
+
 
 }
