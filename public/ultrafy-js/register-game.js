@@ -39,8 +39,11 @@ submit_buttom.addEventListener('click', e => {
     
 
         $('#submit-game').html('SUBMITTED !')
+        setTimeout(function(){ $('#submit-game').html('Submit'); }, 3000);
+        $('#player-name-header').html(team1 + " vs " + team2 + " Has been Registered ! <br> Visit Games to see who claimed your Game !" )
     
   
+       
     
     }
 
