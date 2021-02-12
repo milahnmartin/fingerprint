@@ -103,7 +103,7 @@ const claimed = (id) => {
     let user = firebase.auth().currentUser;
     let photourl = user.photoURL;
 
-
+    stream = prompt('Enter Stream Link');
 
 
     rootGames.child(id).update({
@@ -111,7 +111,8 @@ const claimed = (id) => {
       team2: team2,
       time: time,
       claimed_by: user.displayName,
-      claimed_by_photo: photourl
+      claimed_by_photo: photourl,
+      stream: stream
 
     });
 
