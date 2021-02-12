@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       displayGames();
     } else {
       // No user is signed in.
-        window.location.assign('./login');
+        window.location.assign('./cast-login');
     }
   });
 
