@@ -21,6 +21,18 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   const logout_btn = document.getElementById('update-button');
 
+  const games_click = document.getElementById('game-click');
+
+  const reg_click = document.getElementById('reg-game-click');
+
+  reg_click.addEventListener('click', e => {
+    window.location.assign('./register-game');
+  })
+
+  games_click.addEventListener('click',e => {
+    window.location.assign('./games');
+  })
+
 
 
   

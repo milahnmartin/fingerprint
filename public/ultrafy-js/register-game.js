@@ -76,10 +76,21 @@ submit_buttom.addEventListener('click', e => {
 
 
 
-const games_button = document.getElementById('games-button');
 
 
-games_button.addEventListener('click', e => {
-    e.preventDefault();
-    window.location.assign('./games')
+
+
+const book_click = document.getElementById('book-click');
+const cs_click = document.getElementById('cs-click');
+const games_click = document.getElementById('games-click');
+
+
+book_click.addEventListener('click', e => {
+    window.location.assign('./cast');
+})
+cs_click.addEventListener('click', e => {
+    window.location.assign('./search-counterstrike');
+})
+games_click.addEventListener('click', e => {
+    window.location.assign('./games');
 })
