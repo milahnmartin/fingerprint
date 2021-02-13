@@ -117,6 +117,11 @@ const claimed = (id) => {
 
     stream = prompt('Enter Stream Link');
 
+    if(stream === ""){
+      alert('No Stream Link Was Entered !')
+    }else{
+
+      
 
     rootGames.child(id).update({
       team1: team1,
@@ -128,9 +133,16 @@ const claimed = (id) => {
 
     });
 
-    
+
+        
   let rootDelete = database.ref('cast/claim/'+id);
   rootDelete.remove();   
+
+      
+    }
+
+
+
 
 
   })
