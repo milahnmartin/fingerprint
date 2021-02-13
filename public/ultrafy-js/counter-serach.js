@@ -87,3 +87,24 @@ $("#search-input").keyup(function(event) {
       $("#search-logo").click();
     }
   });
+
+
+
+
+
+
+
+  const book_click = document.getElementById('book-click');
+  const games_click = document.getElementById('games-click');
+  const reg_click = document.getElementById('reg-click');
+  
+  
+  book_click.addEventListener('click', e => {
+      window.location.assign('./cast');
+  })
+  games_click.addEventListener('click', e => {
+      window.location.assign('./games');
+  })
+  reg_click.addEventListener('click', e => {
+      window.location.assign('./register-cs');
+  })
