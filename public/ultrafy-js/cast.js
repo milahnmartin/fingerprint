@@ -119,7 +119,7 @@ const claimed = (id) => {
 
     if(stream === ""){
       alert('No Stream Link Was Entered !')
-    }else{
+    }else if(stream !== ""){
 
       
 
@@ -139,6 +139,8 @@ const claimed = (id) => {
   rootDelete.remove();   
 
       
+    }else{
+      aler('You elected to Cancel !')
     }
 
 
