@@ -11,7 +11,7 @@ submitReg.addEventListener('click' , e => {
     let resolution = document.getElementById('input-4').value;
     let sensitivity = document.getElementById('input-5').value;
     let dpi = document.getElementById('input-6').value;
-    let zoom_sens = document.getElementById('input-7').value;
+    let scope_sens = document.getElementById('input-7').value;
     let sprint_default = document.getElementById('input-8').value;
     let aspect_ratio = document.getElementById('input-9').value;
     let monitor_hz = document.getElementById('input-10').value;
@@ -35,7 +35,7 @@ submitReg.addEventListener('click' , e => {
         resolution: resolution,
         sensitivity: sensitivity,
         dpi: dpi,
-        zoom_sens: zoom_sens,
+        scope_sens: zoom_sens,
         sprint_default: sprint_default,
         aspect_ratio: aspect_ratio,
         monitor_hz: monitor_hz,
