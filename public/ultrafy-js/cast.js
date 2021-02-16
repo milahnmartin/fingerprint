@@ -140,7 +140,7 @@ const claimed = (id) => {
 
       
     }else{
-      aler('You elected to Cancel !')
+      alert('You elected to Cancel !')
     }
 
 
