@@ -35,7 +35,7 @@ submitReg.addEventListener('click' , e => {
         resolution: resolution,
         sensitivity: sensitivity,
         dpi: dpi,
-        scope_sens: zoom_sens,
+        scope_sens: scope_sens,
         sprint_default: sprint_default,
         aspect_ratio: aspect_ratio,
         monitor_hz: monitor_hz,
