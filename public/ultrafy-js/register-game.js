@@ -49,11 +49,13 @@ submit_buttom.addEventListener('click', e => {
 
 
         const game_channel = "https://discord.com/api/webhooks/809930610214043648/81QKwx7Kes6UWYegu2M4t9gitwohpqLo2J5xsRxObhGflXW0_tT0-IHSpv4spFtO84aE";
-
+        let current_date = new Date();
 
         let msg = {
-            "content": "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time
+            "content": "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
         }
+
+
     
     
         
