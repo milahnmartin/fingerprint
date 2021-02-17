@@ -20,7 +20,7 @@ rootref.on('value', info => {
     }
     else {
         let playerName = document.getElementById('player-name-header').innerHTML = myplayer;
-        document.title = myplayer.toLocaleUpperCase() + " | FINGERPRINT ZA";
+        document.title = myplayer.toLocaleUpperCase() + " / FINGERPRINT ZA";
         InfoTable(myplayer);
         mouseTable(myplayer);
         monitorTable(myplayer);
