@@ -7,20 +7,20 @@ searchLogo.addEventListener('click', e => {
     e.preventDefault();
     let searchInput = document.getElementById('search-input').value;
     searchInput = searchInput.toUpperCase();
-    
-   
-   
 
-   checkFirebase(searchInput);
-  
-    })
+
+
+
+    checkFirebase(searchInput);
+
+})
 
 
 const checkFirebase = (input) => {
     const database = firebase.database();
-    const rootref = database.ref('/fortnite/pro');
+    const rootref = database.ref('/counterstrike/pro');
     let ResponseObject = {};
-    
+
 
     rootref.on('value', snap => {
 
@@ -34,19 +34,19 @@ const checkFirebase = (input) => {
             $('#cs-suggestion').html('Did you mean ');
             $('#actual-suggestion').html(getSuggestion(input).toLowerCase());
 
-           
-            
+
+
         }else{
-            window.location.assign('./statistics' + '?player=' + input.toLowerCase());
+            window.location.assign('./statistics?player=' + input.toLowerCase());
         }
 
     })
 
 
 
-   
 
-   
+
+
 
 }
 
@@ -64,12 +64,12 @@ const getSuggestion = (player) => {
         let my_suggestion_array = Object.keys(my_suggestions_object);
 
         my_suggestion_1 = my_suggestion_array[0];
-      
-        
-        theSuggestedname = my_suggestion_1.toLowerCase();
-    })  
 
-   return my_suggestion_1 
+
+        theSuggestedname = my_suggestion_1.toLowerCase();
+    })
+
+    return my_suggestion_1
 }
 
 
@@ -84,9 +84,9 @@ suggestion_click.addEventListener('click', () => {
 
 $("#search-input").keyup(function(event) {
     if (event.which === 13) {
-      $("#search-logo").click();
+        $("#search-logo").click();
     }
-  });
+});
 
 
 
