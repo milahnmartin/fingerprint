@@ -24,13 +24,13 @@ submitReg.addEventListener('click' , e => {
     let current_team = document.getElementById('input-17').value;
     let brightness = document.getElementById('input-18').value;
     let vsyncc = document.getElementById('input-19').value;
-    let fortnite_tracker = document.getElementById('input-20').value;
-    let ramp_bind = document.getElementById('input-21').value;
-    let cone_bind = document.getElementById('input-22').value;
-    let floor_bind = document.getElementById('input-23').value;
-    let wall_bind = document.getElementById('input-24').value;
-    let edit_bind = document.getElementById('input-25').value;
-    let edit_release = document.getElementById('input-26').value;
+    let fortnite_tracker = document.getElementById('input-26').value;
+    let ramp_bind = document.getElementById('input-20').value;
+    let cone_bind = document.getElementById('input-21').value;
+    let floor_bind = document.getElementById('input-22').value;
+    let wall_bind = document.getElementById('input-23').value;
+    let edit_bind = document.getElementById('input-24').value;
+    let edit_release = document.getElementById('input-25').value;
 
 
 
