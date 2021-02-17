@@ -6,7 +6,7 @@ discordBTN.addEventListener('click', e => {
 
 
 let reg_click = document.getElementById('reg-click');
-let cs_click = document.getElementById('cs-click');
+let player_click = document.getElementById('player-click');
 let cast_click = document.getElementById('cast-click');
 
 
@@ -14,13 +14,13 @@ let cast_click = document.getElementById('cast-click');
 reg_click.addEventListener('click', e => {
     e.preventDefault();
 
-    window.location.assign('./register-cs');
+    window.location.assign('./register-section');
 });
 
 
-cs_click.addEventListener('click',e => {
+player_click.addEventListener('click',e => {
     e.preventDefault();
-    window.location.assign('./search-counterstrike')
+    window.location.assign('./search-section')
 })
 
 

@@ -33,6 +33,11 @@ let msg = {
 fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
 "body": JSON.stringify(msg)});
 
+    $('#contact-header').html('Fingerprint ZA Contacted! Thank You !')
+
+    $('html, body').animate({
+        scrollTop: $("#contact-header").offset().top -750
+    }, 2000);
 
 
 
