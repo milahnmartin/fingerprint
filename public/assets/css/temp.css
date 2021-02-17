@@ -1258,10 +1258,10 @@ footer .sub-footer a {
 
   .main-buttons button {
     position: relative !important;
-    right: 7px !important;
-    width: 60px !important;
+    right: -34px !important;
     height: 38px !important;
   }
+
 }
 
 .mouse {
