@@ -82,8 +82,8 @@ book_click.addEventListener('click', e => {
     window.location.assign('./cast');
 })
 cs_click.addEventListener('click', e => {
-    window.location.assign('./search-counterstrike');
+    window.location.assign('./search-section.js');
 })
 reg_click.addEventListener('click', e => {
-    window.location.assign('./register-game');
+    window.location.assign('./register-section.js');
 })

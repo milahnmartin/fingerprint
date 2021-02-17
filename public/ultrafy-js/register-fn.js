@@ -54,7 +54,7 @@ submitReg.addEventListener('click' , e => {
 
     document.getElementById('submit-register').innerHTML = 'Thank You ' + fullname + ' !';
     setTimeout(function(){
-        window.location.assign('./index');
+        window.location.assign('../index');
     }, 2000);
 
 
