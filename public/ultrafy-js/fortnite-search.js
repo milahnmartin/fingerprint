@@ -37,7 +37,7 @@ const checkFirebase = (input) => {
 
 
         }else{
-            window.location.assign('./statistics' + '?player=' + input.toLowerCase());
+            window.location.assign('./statistics?player=' + input.toLowerCase());
         }
 
     })
