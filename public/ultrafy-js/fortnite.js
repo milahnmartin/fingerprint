@@ -27,6 +27,7 @@ rootref.on('value', info => {
         gearTable(myplayer);
         crosshairTable(myplayer);
         profileTable(myplayer);
+        bindsTable(myplayer);
 
     }
 });
@@ -134,6 +135,7 @@ const crosshairTable = (player) => {
         let player_data = response[player];
         let color_blind = player_data['color_blind_mode'];
         let sprint_default = player_data['sprint_default']
+        let edit_release = player_data['edit_release'];
 
 
 
@@ -142,6 +144,7 @@ const crosshairTable = (player) => {
             <tr>
             <td>${color_blind}</td>
             <td>${sprint_default}</td>
+            <td>${edit_release}</td>
             </tr>
 
             `
@@ -165,3 +168,27 @@ const profileTable = (player) => {
     })
 }
 
+
+
+const bindsTable = (player) => {
+  rootref.on('value', links => {
+      let info = links.val()[player];
+      let ramp_bind = info['ramp_bind'];
+      let cone_bind = info['cone_bind'];
+      let wall_bind = info['wall_bind'];
+      let floor_bind = info['floor_bind'];
+
+      $('#player-binds-table').append(
+          `
+          <tr>
+          <td>${ramp_bind}</td>
+          <td>${cone_bind}</td>
+          <td>${wall_bind}</td>
+          <td>${floor_bind}</td>
+          </tr>
+
+          `
+      )
+
+  })
+}
