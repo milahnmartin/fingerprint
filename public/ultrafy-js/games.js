@@ -70,20 +70,3 @@ const getlink = (id) => {
 
 }
 
-
-
-
-const book_click = document.getElementById('book-click');
-const cs_click = document.getElementById('cs-click');
-const reg_click = document.getElementById('reg-click');
-
-
-book_click.addEventListener('click', e => {
-    window.location.assign('./cast');
-})
-cs_click.addEventListener('click', e => {
-    window.location.assign('./search-section.js');
-})
-reg_click.addEventListener('click', e => {
-    window.location.assign('./register-section.js');
-})
