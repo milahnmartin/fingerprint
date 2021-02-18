@@ -13,9 +13,7 @@ submitReg.addEventListener('click' , e => {
     let dpi = document.getElementById('input-6').value;
     let scope_sens = document.getElementById('input-7').value;
     let sprint_default = document.getElementById('input-8').value;
-    let aspect_ratio = document.getElementById('input-9').value;
     let monitor_hz = document.getElementById('input-10').value;
-    let scaling_mode = document.getElementById('input-11').value;
     let color_blind_mode = document.getElementById('input-12').value;
     let monitor = document.getElementById('input-13').value;
     let mouse = document.getElementById('input-14').value;
@@ -43,9 +41,7 @@ submitReg.addEventListener('click' , e => {
         dpi: dpi,
         scope_sens: scope_sens,
         sprint_default: sprint_default,
-        aspect_ratio: aspect_ratio,
         monitor_hz: monitor_hz,
-        scaling_mode: scaling_mode,
         color_blind_mode: color_blind_mode,
         monitor: monitor,
         mouse: mouse,
