@@ -84,8 +84,6 @@ const monitorTable = (player) => {
         let response = data.val();
         let player_data = response[player];
         let res = player_data['resolution'];
-        let aspect_ratio = player_data['aspect_ratio'];
-        let scaling = player_data['scaling_mode'];
         let hz = player_data['monitor_hz']
 
 
@@ -93,8 +91,6 @@ const monitorTable = (player) => {
             `
             <tr>
             <td>${res}</td>
-            <td>${aspect_ratio}</td>
-            <td>${scaling}</td>
             <td>${hz}</td>
             </tr>
 
