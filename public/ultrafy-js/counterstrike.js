@@ -136,7 +136,9 @@ const crosshairTable = (player) => {
         let player_data = response[player];
         let crosshair = player_data['crosshair_code'];
       
-
+        if(crosshair.length !== 29){
+            crosshair = 'none'
+        }
 
         $('#player-crosshair-table').append(
             `
