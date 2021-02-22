@@ -10,6 +10,7 @@ rootGames.on('value', games => {
     let time = mygames.time;
     let team1 = mygames.team1.toUpperCase();
     let team2 = mygames.team2.toUpperCase();
+    let game_id = mygames.id;
     let booked = mygames.booked;
     let claimed = mygames.claimed_by;
     let claimed_photo = mygames.claimed_by_photo;
@@ -32,7 +33,7 @@ rootGames.on('value', games => {
                     <p></p>
                   </div>
                   <div class="extra">
-                    <div class="ui right floated primary button" id="${team1.toLowerCase()+"vs"+team2.toLowerCase()}" onclick="getlink(this.id)">
+                    <div class="ui right floated primary button" id="${game_id}" onclick="getlink(this.id)">
                       VIEW STREAM
                       <i class="right chevron icon"></i>
                     </div>

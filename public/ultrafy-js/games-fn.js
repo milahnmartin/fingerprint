@@ -12,6 +12,7 @@ rootGames.on('value', games => {
         let amount = mygames.booked;
         let claimed = mygames.claimed_by;
         let claimed_photo = mygames.claimed_by_photo;
+        let game_id = mygames.id;
 
         $('#game-feed').append(
 
@@ -31,7 +32,7 @@ rootGames.on('value', games => {
                     <p></p>
                   </div>
                   <div class="extra">
-                    <div class="ui right floated primary button" id="${tournament.toLowerCase()}" onclick="getlink(this.id)">
+                    <div class="ui right floated primary button" id="${game_id}" onclick="getlink(this.id)">
                       VIEW STREAM
                       <i class="right chevron icon"></i>
                     </div>

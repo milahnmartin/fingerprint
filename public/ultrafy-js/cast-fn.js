@@ -103,12 +103,14 @@ const claimed = (id) => {
         let user = firebase.auth().currentUser;
         let user_photo = user.photoURL
         let user_name = user.displayName;
+        let game_id = user.uid;
 
-        rootGames.push({
+        rootGames.child(id+game_id.toLowerCase()).update({
             claimed_by:user_name,
             claimed_by_photo:user_photo,
             time: data.time,
             tournament: data.tournament,
+            id: id+game_id.toLowerCase(),
             stream: stream
 
         })
