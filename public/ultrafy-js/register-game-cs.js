@@ -1,6 +1,6 @@
 const database = firebase.database();
-const rootClaim = database.ref('cast/claim');
-const rootGames = database.ref('cast/games');
+const rootClaim = database.ref('counterstrike/claim');
+const rootGames = database.ref('vounterstrike/games');
 
 
 
@@ -52,7 +52,7 @@ submit_buttom.addEventListener('click', e => {
         let current_date = new Date();
 
         let msg = {
-            "content": "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
+            "content":"***CS:GO GAME REGISTERED -> " + "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
         }
 
 
@@ -82,19 +82,3 @@ submit_buttom.addEventListener('click', e => {
 
 
 
-
-
-const book_click = document.getElementById('book-click');
-const cs_click = document.getElementById('cs-click');
-const games_click = document.getElementById('games-click');
-
-
-book_click.addEventListener('click', e => {
-    window.location.assign('./cast');
-})
-cs_click.addEventListener('click', e => {
-    window.location.assign('./search-counterstrike');
-})
-games_click.addEventListener('click', e => {
-    window.location.assign('./games');
-})

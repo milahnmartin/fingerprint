@@ -136,7 +136,9 @@ const crosshairTable = (player) => {
         let player_data = response[player];
         let crosshair = player_data['crosshair_code'];
       
-
+        if(crosshair.length !== 29){
+            crosshair = 'none'
+        }
 
         $('#player-crosshair-table').append(
             `
@@ -151,6 +153,12 @@ const profileTable = (player) => {
     rootref.on('value', links => {
         let esea = links.val()[player]['esea'];
         let faceit = links.val()[player]['faceit'];
+        if (esea === undefined){
+            esea = 'none'
+        }
+        if (faceit === undefined){
+            faceit == 'none'
+        }
 
         $('#player-link-table').append(
             `

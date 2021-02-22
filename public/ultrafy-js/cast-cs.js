@@ -1,6 +1,6 @@
 const database = firebase.database();
-const rootClaim = database.ref('cast/claim');
-const rootGames = database.ref('cast/games');
+const rootClaim = database.ref('counterstrike/claim');
+const rootGames = database.ref('counterstrike/games');
 
 
 
@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       document.getElementById('player-name-header').innerHTML = 'Book Your Game ' + user.displayName;
-      document.title = user.displayName + " CAST | Fingerprint ZA"
+      document.title = user.displayName + "CS:GO | CAST | Fingerprint ZA"
 
       
     } else {
@@ -55,7 +55,7 @@ let booked = mygames.booked;
         
         <div class="item">
             <div class="image">
-              <img src="./assets/images/bluefinger.png" style="width: 100px; height: 100px;">
+              <img src="../assets/images/bluefinger.png" style="width: 100px; height: 100px;">
             </div>
             <div class="content">
               <a class="header">${team1}  vs  ${team2}</a>
@@ -122,7 +122,7 @@ const claimed = (id) => {
 
 
         
-  let rootDelete = database.ref('cast/claim/'+id);
+  let rootDelete = database.ref('counterstrike/claim/'+id);
   rootDelete.remove();   
 
       
