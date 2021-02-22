@@ -47,6 +47,9 @@ let time = mygames.time;
 let team1 = mygames.team1.toUpperCase();
 let team2 = mygames.team2.toUpperCase();
 let booked = mygames.booked;
+let user = firebase.auth().currentUser;
+let user_name = user.displayName;
+
 
       $('#game-feed').append(
 
@@ -104,13 +107,15 @@ const claimed = (id) => {
     let user = firebase.auth().currentUser;
     let user_photo = user.photoURL
     let user_name = user.displayName;
+    let user_uid = user.uid;
 
-    rootGames.push({
+    rootGames.child(id+user_uid.toLowerCase()).update({
       claimed_by:user_name,
       claimed_by_photo:user_photo,
       time: data.time,
       team1: data.team1,
       team2: data.team2,
+      id: id+user_uid.toLowerCase(),
       stream:stream
 
     })
