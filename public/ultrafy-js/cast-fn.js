@@ -118,9 +118,9 @@ const claimed = (id) => {
             });
 
 
-
-            let rootDelete = database.ref('fortnite/claim/'+id);
-            rootDelete.remove();
+            //
+            // let rootDelete = database.ref('fortnite/claim/'+id);
+            // rootDelete.remove();
 
 
         }else{
