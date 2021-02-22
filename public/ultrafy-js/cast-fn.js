@@ -69,7 +69,7 @@ const displayGames = () => {
                   CLAIM
                   <i class="right chevron icon"></i>
                 </div>
-                <div class="ui label">${booked}</div>
+                <div class="ui label">Times Booked ${booked}</div>
               </div>
             </div>
           </div>
@@ -118,9 +118,9 @@ const claimed = (id) => {
             });
 
 
-
-            let rootDelete = database.ref('fortnite/claim/'+id);
-            rootDelete.remove();
+            //
+            // let rootDelete = database.ref('fortnite/claim/'+id);
+            // rootDelete.remove();
 
 
         }else{

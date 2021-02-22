@@ -32,7 +32,7 @@ submit_buttom.addEventListener('click', e => {
         rootClaim.child(tournament_type).update({
           tournament:tournament_type,
             time: game_time,
-            booked: "NOT BOOKED"
+            booked: 0
         });
 
 
@@ -50,7 +50,7 @@ submit_buttom.addEventListener('click', e => {
         let current_date = new Date();
 
         let msg = {
-            "content": "***FORTNITE GAME REGISTERED*** -> " +"__**Team 1**__:  " + tournament_type.toUpperCase()  + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
+            "content": "***FORTNITE GAME REGISTERED*** -> " +"__**Tournament**__:  " + tournament_type.toUpperCase()  + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
         }
 
 

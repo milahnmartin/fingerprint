@@ -52,7 +52,7 @@ submit_buttom.addEventListener('click', e => {
         let current_date = new Date();
 
         let msg = {
-            "content":"***CS:GO GAME REGISTERED -> " + "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
+            "content":"***CS:GO GAME REGISTERED*** -> " + "__**Team 1**__:  " + team1.toUpperCase() + "  __**vs**__  " + team2.toUpperCase() + "   __**Time**__:  " + game_time + "  __**Created**__  " + current_date
         }
 
 
