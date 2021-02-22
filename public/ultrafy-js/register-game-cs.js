@@ -34,7 +34,7 @@ submit_buttom.addEventListener('click', e => {
             team1:team1,
             team2:team2,
             time:game_time,
-            booked: "NOT BOOKED"
+            booked: 0
         });
     
 
