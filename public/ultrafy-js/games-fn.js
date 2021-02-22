@@ -9,7 +9,7 @@ rootGames.on('value', games => {
         let mygames = value.val();
         let time = mygames.time;
         let tournament = mygames.tournament.toUpperCase();
-        let booked = mygames.booked;
+        let amount = mygames.booked;
         let claimed = mygames.claimed_by;
         let claimed_photo = mygames.claimed_by_photo;
 
@@ -35,7 +35,7 @@ rootGames.on('value', games => {
                       VIEW STREAM
                       <i class="right chevron icon"></i>
                     </div>
-                    <div class="ui label">Claimed By ${claimed}</div>
+                    <div class="ui label">Streamed By ${claimed}</div>
                   </div>
                 </div>
               </div>

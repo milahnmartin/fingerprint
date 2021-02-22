@@ -69,7 +69,7 @@ const displayGames = () => {
                   CLAIM
                   <i class="right chevron icon"></i>
                 </div>
-                <div class="ui label">Times Booked ${booked}</div>
+                <div class="ui label">Streamed by ${booked} Users</div>
               </div>
             </div>
           </div>
@@ -88,58 +88,54 @@ const displayGames = () => {
 
 
 const claimed = (id) => {
-    console.log(id)
+    let stream = prompt('Enter Stream URL');
+    if(stream === ""){
+        alert('Nothing Was Entered')
+    }else{
 
 
-    rootClaim.on('value', data => {
-        let mygame = data.val();
-        mygame = mygame[id];
+        let data = {};
 
-        let tournament = mygame.tournament;
-        let time = mygame.time;
+        rootClaim.on('value',info => {
+            data = info.val()[id];
+        })
+
         let user = firebase.auth().currentUser;
-        let photourl = user.photoURL;
+        let user_photo = user.photoURL
+        let user_name = user.displayName;
 
-        stream = prompt('Enter Stream Link');
+        rootGames.child(id).update({
+            claimed_by:user_name,
+            claimed_by_photo:user_photo,
+            time: data.time,
+            tournament: data.tournament
 
-        if(stream === ""){
-            alert('No Stream Link Was Entered !')
-        }else if(stream !== ""){
+        })
 
-
-
-            rootGames.child(id).update({
-                tournament: tournament,
-                time: time,
-                claimed_by: user.displayName,
-                claimed_by_photo: photourl,
-                stream: stream
-
-            });
-
-
-            //
-            // let rootDelete = database.ref('fortnite/claim/'+id);
-            // rootDelete.remove();
-
-
-        }else{
-            alert('You elected to Cancel !')
-        }
+        amounntinc(id);
 
 
 
-
-
-    })
-
-
+    }
 
 
 }
 
 
+const amounntinc = (id) => {
+    let data = {};
+    rootClaim.on('value', info => {
+        data = info.val()[id];
 
+    })
+
+    let amount = data.booked;
+
+    rootClaim.child(id).update({
+        booked: amount+1
+    });
+
+};
 
 
 
