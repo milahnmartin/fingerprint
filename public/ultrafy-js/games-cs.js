@@ -1,5 +1,5 @@
 const database = firebase.database();
-const rootGames = database.ref('cast/games');
+const rootGames = database.ref('counterstrike/games');
 
 
 rootGames.on('value', games => {
