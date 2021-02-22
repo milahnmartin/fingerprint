@@ -104,11 +104,12 @@ const claimed = (id) => {
         let user_photo = user.photoURL
         let user_name = user.displayName;
 
-        rootGames.child(id).update({
+        rootGames.push({
             claimed_by:user_name,
             claimed_by_photo:user_photo,
             time: data.time,
-            tournament: data.tournament
+            tournament: data.tournament,
+            stream: stream
 
         })
 
