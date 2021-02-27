@@ -136,7 +136,7 @@ const crosshairTable = (player) => {
         let player_data = response[player];
         let crosshair = player_data['crosshair_code'];
       
-        if(crosshair.length !== 29){
+        if(crosshair[0] !== 'C'){
             crosshair = 'none'
         }
 
