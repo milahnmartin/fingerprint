@@ -1,3 +1,7 @@
+const getData = (id) => {
+    window.location.assign('./statistics?player=' + id.toLowerCase());
+}
+
 let theSuggestedname = "";
 
 const searchLogo = document.getElementById('search-logo');
@@ -37,6 +41,8 @@ const checkFirebase = (input) => {
 
 
         }else{
+
+
             window.location.assign('./statistics?player=' + input.toLowerCase());
         }
 
@@ -108,3 +114,6 @@ games_click.addEventListener('click', e => {
 reg_click.addEventListener('click', e => {
     window.location.assign('./register');
 })
+
+
+
