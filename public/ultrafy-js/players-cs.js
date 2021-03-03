@@ -11,7 +11,7 @@ snapshot.forEach(function (childSnapshot) {
     let gamertag = childdata.gamertag;
     let age = childdata.age;
     let team = childdata.team;
-    let aspect = childdata.aspect_ratio;
+    let res = childdata.resolution;
 
     let image = ''
 
@@ -54,7 +54,7 @@ $('#popular-feed').append(
     </div>
     <div class="extra content">
       <span class="right floated">
-        Aspect Ratio: ${aspect}
+        Res: ${res}
       </span>
       <span>
         <i class="user icon"></i>
