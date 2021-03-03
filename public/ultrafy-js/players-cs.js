@@ -54,7 +54,7 @@ $('#popular-feed').append(
     </div>
     <div class="extra content">
       <span class="right floated">
-        Aspect Ratio: ${aspect_ratio}
+        Aspect Ratio: ${aspect}
       </span>
       <span>
         <i class="user icon"></i>
