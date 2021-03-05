@@ -37,6 +37,8 @@ snapshot.forEach(function (childSnapshot) {
       image = 'glacier.jpg'
     }else if(team[0] + team[1] + team[2] === 'GAC' ){
       image = 'gac.png'
+    }else if(team[0] + team[1] + team[2] === 'DNM' ){
+    image = 'dnmk.png'
     }else{
       image = 'bluefinger.png'
     }
